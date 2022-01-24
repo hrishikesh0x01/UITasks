@@ -6,36 +6,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flex Mock Up</title>
 
+        <link rel="stylesheet" href="assets/icons/style.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body class="h100">
         <div class="wrapper d-flex h100">
-            <aside class="d-flex sidebar">
-                <section class="sidebar-top">
-                    <div><img src="" alt=""></div>
+            <aside class="d-flex sidebar f-col">
+                <section class="d-flex sidebar-item header-height">
+                    <div class="icon icon-ic_fluent_grid_dots_filled_icon"></div>
+                    <span>Polka</span>
                 </section>
-                <nav class="nav">
-                    <section class="sidebar-section">
-                        <ul>
-                            <li>Meetings</li>
-                            <li>Calender</li>
-                            <li>Compare</li>
-                        </ul>
+                <nav class="nav d-flex f-col">
+                    <section class="sidebar-section bottom-border">
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-dot-circle-o"></div>
+                            <span>Meetings</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-calendar-o"></div>
+                            <span>Calender</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-calendar-o"></div>
+                            <span>Compare</span>
+                        </div>
                     </section>
                     <section class="sidebar-section">
-                        <ul>
-                            <li>Account</li>
-                            <li>Faq</li>
-                            <li>Product</li>
-                            <li>Security</li>
-                            <li>Sign out</li>
-                        </ul>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-account_circle"></div>
+                            <span>Account</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-question-circle-o"></div>
+                            <span>Faq</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-product-hunt"></div>
+                            <span>Product</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-defense_protection_security_shield_icon"></div>
+                            <span>Security</span>
+                        </div>
+                        <div class="d-flex sidebar-item">
+                            <div class="icon icon-log-out"></div>
+                            <span>Sign out</span>
+                        </div>
                     </section>
                 </nav>
             </aside>
             <section class="d-flex f-col f-grow">
-                <header class="header h2r">
-                    header
+                <header class="d-flex header header-height">
+                    <div class="search-bar header-content">
+                        <input type="search" name="search" id="search">
+                    </div>
+                    <div class="header-button-con">
+                        <button class="header-button">Upload a meeting</button>
+                    </div>
                 </header>
                 <main class="main f-grow">main</main>
             </section>

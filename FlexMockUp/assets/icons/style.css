@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'app';
-  src:  url('fonts/app.eot?po1i45');
-  src:  url('fonts/app.eot?po1i45#iefix') format('embedded-opentype'),
-    url('fonts/app.ttf?po1i45') format('truetype'),
-    url('fonts/app.woff?po1i45') format('woff'),
-    url('fonts/app.svg?po1i45#app') format('svg');
+  src:  url('fonts/app.eot?h5t2b8');
+  src:  url('fonts/app.eot?h5t2b8#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?h5t2b8') format('truetype'),
+    url('fonts/app.woff?h5t2b8') format('woff'),
+    url('fonts/app.svg?h5t2b8#app') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ic_fluent_grid_dots_filled_icon:before {
+  content: "\e907";
+}
+.icon-defense_protection_security_shield_icon:before {
+  content: "\e905";
+}
+.icon-apps_icon:before {
+  content: "\e904";
+}
+.icon-log-out:before {
+  content: "\e908";
+}
 .icon-account_circle:before {
   content: "\e900";
+}
+.icon-product-hunt:before {
+  content: "\e906";
 }
 .icon-question-circle-o:before {
   content: "\e901";
@@ -36,7 +51,4 @@
 }
 .icon-dot-circle-o:before {
   content: "\e903";
-}
-.icon-apps_icon:before {
-  content: "\e904";
 }
