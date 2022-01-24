@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    flex-basis: 20%;
+    /* max-width: 20%; */
+}
+
+.sidebar-section {
+    padding: 20px;
+}
+
+.h2r {
+    height: 2rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-grow {
+    flex-grow: 1;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.w100 {
+    width: 100%;
+}
