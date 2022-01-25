@@ -20,11 +20,8 @@ html {
     flex-grow: 1;
 }
 
-.d-flex .icon {
-    align-self: center;
-}
-
 .icon {
+    align-self: center;
     padding-right: 0.5rem;
     width: 1.5rem;
     text-align: center;
@@ -49,19 +46,21 @@ html {
 .header-height {
     flex-basis: 8%;
     flex-shrink: 0;
-    min-height: 8%;
+    min-height: 56px;
     border-bottom: 1px solid #aaa;
 }
 
 .sidebar {
     flex-basis: 20%;
+    max-width: 225px;
+    min-width: max-content;
     overflow: hidden;
     border-right: 1px solid #aaa;
 }
 
 .sidebar-item {
-    padding: 0 1rem;
-    margin: 5%;
+    padding: 0.75rem;
+    margin: 0.75rem;
     align-items: center;
     border-radius: 0.5rem;
 }
@@ -85,13 +84,45 @@ html {
 }
 
 #search {
+    border: 1px solid #aaa;
     border-radius: 0.25rem;
-    width: 60%;
+    width: 700px;
     height: 50%;
+    min-height: 2.25rem;
+    padding: 0 10px;
+    font-size: 1rem;
+    outline: none;
 }
 
+/* #search:focus, #search:active {
+} */
+
 .search-bar {
+    padding-left: 2.75rem;
+    margin: auto 0;
+    width: max-content;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.search-input-con {
+    justify-content: center;
+    align-content: center;
     align-items: center;
+}
+
+.srch-icon {
+    position: absolute;
+    margin: auto 0;
+    margin-right: 10px;
+    width: 1rem;
+    height: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .bottom-border {
