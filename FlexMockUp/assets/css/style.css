@@ -134,6 +134,10 @@ html {
     bottom: 0;
 }
 
+.main {
+    background-color: #fcfbfe;
+}
+
 .bottom-border {
     border-bottom: 1px solid #f2f3fa;
 }
