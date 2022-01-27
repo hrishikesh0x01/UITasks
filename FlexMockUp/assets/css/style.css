@@ -8,6 +8,11 @@ html {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    color: #919191;
+}
+
 .d-flex {
     display: flex;
 }
@@ -37,12 +42,13 @@ html {
 }
 
 .header-button-con {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     width: 30%;
     max-width: 300px;
     min-width: 250px;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .header-button {
@@ -53,6 +59,7 @@ html {
     background-color: #18dca1;
     color: #c5fef9;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .header-height {
@@ -72,18 +79,20 @@ html {
 
 .sidebar-item {
     padding: 0.75rem 1.75rem;
-    margin: 0.75rem;
+    margin: 0.75rem 1.375rem;
+    color: #888888;
     align-items: center;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .sidebar-item:hover {
     background-color: #f7f6f9;
+    color: #383838;
 }
 
 .sidebar-top {
-    margin: 0;
-    border-radius: 0;
+    color: #383838;
 }
 
 .sidebar-section {
@@ -109,9 +118,6 @@ html {
     min-width: 500px;
     max-width: 900px;
 }
-
-/* #search:focus, #search:active {
-} */
 
 .search-bar {
     padding: 0 3rem;
