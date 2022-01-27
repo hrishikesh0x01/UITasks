@@ -38,7 +38,7 @@ a {
 }
 
 .header-button-con {
-    padding: 1rem 0;
+    padding: 0.75% 0;
     width: 30%;
     max-width: 300px;
     min-width: 250px;
@@ -112,7 +112,6 @@ a {
     outline: none;
     width: 70%;
     min-width: 500px;
-    max-width: 900px;
 }
 
 .search-bar {
