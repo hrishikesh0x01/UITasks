@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.f-grow-1 {
+    flex-grow: 1;
+}
+
+.fj-center {
+    justify-content: center;
+}
+
+.fj-space-evenly {
+    justify-content: space-evenly;
+}
+
+.f-align-center {
+    align-items: center;
+}
+
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.title-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.nav-icon {
+    background: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hero-section {
+    color: #ffffff;
+    background-image: url("../images/pexels-photo-3218467.jpeg");
+    margin-bottom: 6rem;
+    min-height: 780px;
+}
+
+.logo-img-con {
+    margin: 0 auto;
+}
+
+.hero-content {
+    width: 90%;
+}
+
+.hero-title {
+    font-size: 4rem;
+}
+
+.hero-text {
+    font-size: 1.125rem;
+    width: 60%;
+    margin: auto;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-bottom: 0;
+    border-top: 40px solid white;
+}
+
+.heading-subtitle {
+    letter-spacing: 0.25rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+.heading-title {
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.2;
+    max-width: 1050px;
+}
+
+.content1 {
+    margin: 5rem 0;
+}
+
+.card-1 {
+    width: 33.33%;
+    height: 400px;
+}
+
+.c1-text-card {
+    padding: 1.75rem;
+}
+
+.c1-heading {
+    margin: 1.5rem 0;
+}
+
+.c1-subtitle {
+    letter-spacing: 0.25rem;
+    padding-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.c1-title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.c1-text {
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.c1-link {
+    letter-spacing: 0.15rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-decoration-line: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.125rem;
+    cursor: pointer;
+}
+
+.content2 {
+    margin: 1.5rem 0;
+}
+
+.card-2 {
+    width: 29%;
+    padding: 2.625rem;
+}
+
+.c2-date {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.c2-text {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.s3-button a {
+    display: block;
+    width: fit-content;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.35rem;
+    padding: 1rem 4rem;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    margin-top: 1rem;
+}
+
+.spacing-div {
+    height: 180px;
+}
+
+.content3 {
+    margin: 0 auto;
+}
+
+.card-3 {
+    width: 42%;
+    padding: 3.75rem 2rem 0;
+}
+
+.images-container {
+    height: 700px;
+    margin: 130px 0 100px;
+}
+
+.img-div-l1 {
+    width: 50%;
+    height: 100%;
+}
+
+.right-img-1 {
+    width: 100%;
+    height: 50%;
+}
+
+.right-img-2 {
+    width: 50%;
+    height: 50%;
+}
+
+.content4 {
+    width: 95%;
+    margin: 0 auto 165px;
+}
+
+.card-4 {
+    width: 25%;
+    height: 280px;
+}
+
+.c4-icon {
+    font-size: 4rem;
+}
+
+.c4-number {
+    font-size: 3rem;
+    line-height: 2;
+}
+
+.bg-circle {
+    width: 280px;
+    height: 280px;
+    padding: 25%;
+    border-radius: 50%;
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 0.375rem;
+}
+
+.contact-us-form-con {
+    margin: 2rem 0 4rem;
+}
+
+.contact-us-form {
+    display: inline-block;
+}
+
+.form-div {
+    min-width: 550px;
+}
+
+.form-div input {
+    height: 48px;
+    margin: 6px 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #c6c6c6;
+    border: 1px solid #c6c6c6;
+    outline: none;
+}
+
+.checkbox-con a {
+    color: #478ac9;
+}
+
+.checkbox-con label {
+    margin: 0 0.25rem;
+}
+
+#terms-checkbox {
+    height: auto;
+}
+
+.submit-btn {
+    width: max-content;
+    padding: 0.8rem 1.75rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    line-height: 1;
+    margin: 0.5rem 0
+}
+
+.footer {
+    background-color: #333333;
+    margin-bottom: 70px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.footer-con {
+    width: 33%;
+    margin: auto;
+    height: 240px;
+    padding: 50px 0 40px;
+    justify-content: space-between;
+}
+
+.foot-text a {
+    all: revert;
+    color: #a1bed8;
+}
+
+@media only screen and (max-width: 1090px) {
+    .hero-title {
+        font-size: 2.75rem;
+    }
+    .card-1 {
+        width: 50%;
+    }
+    .heading-title {
+        font-size: 2rem;
+    }
+    .images-container {
+        height: 700px;
+    }
+    .img-div-l1 {
+        width: 100%;
+        height: 50%;
+    }
+    .card-4 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .card-1 {
+        width: 100%;
+    }
+    .heading-title {
+        font-size: 1.5rem;
+    }
+    .card-2 {
+        width: 75%;
+    }
+    .card-3 {
+        width: 100%;
+    }
+    .images-container {
+        height: 700px;
+    }
+    .img-div-l1 {
+        width: 100%;
+        height: 50%;
+    }
+    .card-4 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-text {
+        font-size: 0.75rem;
+    }
+    .card-2 {
+        width: 100%;
+    }
+    .contact-us-form-con {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
