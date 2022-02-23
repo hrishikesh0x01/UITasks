@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        SCSS MockUp
+    </title>
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <div class="d-flex flex-column wrapper h-100">
+        <header class="d-flex justify-content-between header w-100">
+            <div>
+                <span class="icon">icon</span>
+                <input type="text" name="search-text" id="search-input">
+                <button type="button">Search</button>
+            </div>
+            <nav class="nofication">
+                <ul class="d-flex nav-list h-100">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <div class="icon">
+                                icon
+                                <div class="badge">red</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <div class="icon">
+                                icon
+                                <div class="badge">red</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <div class="icon">icon</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="d-flex flex-grow-1">
+            <aside class="d-flex flex-column sidebar">
+                <nav class="flex-grow-1 nav-section">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav-section">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <div class="icon">icon</div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="d-flex flex-column flex-grow-1 main-content">
+                <h1 class="main-title">
+                    Dashboard
+                </h1>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <div class="d-flex flex-column stat-card">
+                        <div class="d-flex justify-content-between">
+                            <span class="icon">icon</span>
+                            <span class="icon">icon</span>
+                        </div>
+                        <h4 class="card-title">Total Views</h4>
+                        <div class="count">308.402</div>
+                        <span>Start from 1 Jan 2021</span>
+                    </div>
+                    <div class="d-flex flex-column stat-card">
+                        <div class="d-flex justify-content-between">
+                            <span class="icon">icon</span>
+                            <span class="icon">icon</span>
+                        </div>
+                        <h4 class="card-title">Total Products</h4>
+                        <div class="count">10.820</div>
+                        <span><a href="">+ Add New Product</a></span>
+                    </div>
+                    <div class="d-flex flex-column stat-card">
+                        <div class="d-flex justify-content-between">
+                            <span class="icon">icon</span>
+                            <span class="icon">icon</span>
+                        </div>
+                        <h4 class="card-title">Total Users</h4>
+                        <div class="count">8.425</div>
+                        <span>New user noted every week</span>
+                    </div>
+                    <div class="d-flex flex-column stat-card">
+                        <div class="d-flex justify-content-between">
+                            <span class="icon">icon</span>
+                            <span class="icon">icon</span>
+                        </div>
+                        <h4 class="card-title">Total Sells</h4>
+                        <div class="count">1.028.623</div>
+                        <span>Start from 1 Jan 2021</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between flex-grow-1 overflow-hidden">
+                    <div class="product-stock overflow-auto h-100">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="table-cell">No</th>
+                                    <th class="table-cell">Product Name</th>
+                                    <th class="table-cell">Status</th>
+                                    <th class="table-cell">Sold</th>
+                                    <th class="table-cell">View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td class="table-cell">1</td>
+                                    <td class="table-cell">News Mobile App UI KIT F...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">2</td>
+                                    <td class="table-cell">40+ Landing page Temp...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">3</td>
+                                    <td class="table-cell">Doctor Consultant UI KIT ...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">4</td>
+                                    <td class="table-cell">Startup Illustration KIT Ve...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="veiws-sells-chart w-25">
+                        <div class="d-flex justify-content-between chart-head">
+                            <span>Views & Sells</span>
+                            <div class="dropdown">This Week</div>
+                        </div>
+                        <div class="d-flex">
+                            <span class="total-views">Total Views</span>
+                            <span class="total-sells">Total Sells</span>
+                        </div>
+                        <div class="d-flex justify-content-around chart h-75">
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                            <div class="position-relative bar-container h-100">
+                                <div class="position-absolute bar bar-sells"></div>
+                                <div class="position-absolute bar bar-views"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

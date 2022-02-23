@@ -1,0 +1,9 @@
+// Card styles goes here
+.stat-card {
+    width: 24%;
+
+    .count {
+        border-bottom: $border-common;
+        border-width: $card-border-width;
+    }
+}
