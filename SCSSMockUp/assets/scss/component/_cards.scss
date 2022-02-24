@@ -1,9 +1,99 @@
 // Card styles goes here
+.card-row {
+    margin-left: -1.25rem;
+    margin: 1rem 0 1rem -1.25rem;
+}
+
+.stat-card-wrapper {
+    width: 25%;
+    padding-left: 1.5rem;
+}
+
 .stat-card {
-    width: 24%;
+    font-weight: $stat-card-font-weight;
+    color: $stat-card-color;
+    background-color: $stat-card-bg-color;
+    padding: 1rem;
+
+    &-title {
+        font-size: $stat-card-font-size;
+        font-weight: $stat-card-font-weight;
+    }
 
     .count {
+        font-weight: 500;
+        font-size: 1.75rem;
+        color: $body-color;
+        padding-bottom: $stat-card-count-padding;
         border-bottom: $border-common;
-        border-width: $card-border-width;
+    }
+
+    .card-bottom-text {
+        padding-top: 0.75rem;
+        font-size: $stat-card-font-size;
+    }
+
+    .card-icons {
+        font-size: 1.75rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    &:hover {
+        color: $stat-card-hover-color;
+        .icon-container {
+            color: $stat-card-hover-color;
+        }
+
+        [class^="chart-icon-"],
+        [class*=" chart-icon-"] {
+            color: $stat-card-hover-color;
+        }
+
+        .stat-card-title {
+            color: $stat-card-hover-color;
+        }
+
+        .count {
+            color: $stat-card-hover-color;
+        }
+    }
+
+    .chart-icon- {
+        &up {
+            color: map-get($theme-colors, "success");
+        }
+        // Same Icon flipped horizontally
+        &down {
+            color: map-get($theme-colors, "secondary");
+            transform: scaleX(-1);
+        }
+    }
+}
+
+$cards: (
+    "stat-card-1": map-get($theme-colors, "primary"),
+    "stat-card-2": map-get($theme-colors, "success"),
+    "stat-card-3": map-get($theme-colors, "primary"),
+    "stat-card-4": map-get($theme-colors, "info"),
+);
+
+@each $card, $color in $cards {
+    .#{$card} {
+        .icon-container {
+            background-color: lighten($color, 30%);
+            color: $color;
+        }
+
+        &:hover {
+            background-color: $color;
+            .icon-container {
+                background-color: lighten($color, 5%);
+            }
+        }
     }
 }

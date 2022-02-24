@@ -1,0 +1,14 @@
+// Table styles
+.table {
+    background-color: $table-bg-color;
+    padding: 1rem;
+    border-spacing: 0;
+
+    .table-cell {
+        padding: 1.5rem;
+    }
+
+    .table-body .table-row {
+        background-color: $table-row-bg-color;
+    }
+}

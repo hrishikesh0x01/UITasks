@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 *,
 ::after,
 ::before {
@@ -17,10 +17,15 @@ body {
 
 body {
   color: #160e4d;
-  line-height: 1;
+  line-height: 1.5;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   background-color: #f8f8f8;
+}
+
+button, input {
+  font-family: "Josefin Sans", sans-serif;
+  outline: none;
 }
 
 img {
@@ -30,6 +35,10 @@ img {
 
 ul {
   list-style-type: none;
+}
+
+.icon {
+  display: block;
 }
 
 .d-none {
@@ -208,20 +217,319 @@ ul {
 }
 
 .header {
-  height: 100px;
+  height: 90px;
+  padding: 0 2.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.header .brand-icon {
+  color: #438ffe;
+  font-size: 1.125rem;
+  padding-right: 1.5rem;
+  text-shadow: 2px -2px #ffffff, 7px -7px #c7deff, 4px -7px #c7deff, 7px -4px #c7deff;
+}
+
+.header .notification .nav-item {
+  padding: 0.125rem;
+  padding-left: 2rem;
+}
+
+.header .notification .icon {
+  color: #abb1bf;
+  font-size: 1.125rem;
+}
+
+.header .notification .badge {
+  height: 5px;
+  width: 5px;
+  background-color: #fe764b;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+
+.header .notification .profile-img {
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.825rem;
+}
+
+.header .notification .dropdown-icon {
+  font-size: 0.5rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.search-container {
+  height: 44px;
+  margin-left: 2.5rem;
+  background-color: #f8f8f8;
+}
+
+.search-container .search-icon {
+  color: #abb1bf;
+  padding: 0 1rem;
+}
+
+.search-container #search-input {
+  height: 100%;
+  width: 300px;
+  border: none;
+  border-radius: 0;
+  background-color: #f8f8f8;
+}
+
+.search-container #search-input::-webkit-input-placeholder {
+  color: #abb1bf;
+}
+
+.search-container #search-input:-ms-input-placeholder {
+  color: #abb1bf;
+}
+
+.search-container #search-input::-ms-input-placeholder {
+  color: #abb1bf;
+}
+
+.search-container #search-input::placeholder {
+  color: #abb1bf;
+}
+
+.main-content {
+  padding: 2.5rem;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .sidebar {
-  width: 100px;
+  background-color: #ffffff;
+  padding-bottom: 4.25rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.sidebar .nav-item {
+  margin: 1.25rem;
+}
+
+.sidebar .nav-link {
+  font-size: 1.25rem;
+  color: #abb1bf;
+}
+
+.sidebar .nav-link .icon {
+  padding: 1.25rem;
+}
+
+.sidebar .nav-link.active {
+  color: #438ffe;
+}
+
+.sidebar-toggle {
+  background-color: #ffffff;
+  border-radius: -10px;
+  padding: 0.25rem 0.125rem;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar-toggle .icon {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#sidebar-checkbox:checked ~ .sidebar {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  width: 0;
+}
+
+#sidebar-checkbox:checked ~ .sidebar .sidebar-toggle {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -120px;
+}
+
+#sidebar-checkbox:checked ~ .sidebar .sidebar-toggle .icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+.btn-primary {
+  background-color: #438ffe;
+}
+
+.btn-success {
+  background-color: #8bc38a;
+}
+
+.btn-secondary {
+  background-color: #fe764b;
+}
+
+.btn-info {
+  background-color: #83bcbd;
+}
+
+.card-row {
+  margin-left: -1.25rem;
+  margin: 1rem 0 1rem -1.25rem;
+}
+
+.stat-card-wrapper {
+  width: 25%;
+  padding-left: 1.5rem;
 }
 
 .stat-card {
-  width: 24%;
+  font-weight: 300;
+  color: #abb1bf;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.stat-card-title {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .stat-card .count {
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: #160e4d;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid #e2e2e2;
-  border-width: 2px;
+}
+
+.stat-card .card-bottom-text {
+  padding-top: 0.75rem;
+  font-size: 1rem;
+}
+
+.stat-card .card-icons {
+  font-size: 1.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.stat-card .icon-container {
+  width: 60px;
+  height: 60px;
+}
+
+.stat-card:hover {
+  color: #ffffff;
+}
+
+.stat-card:hover .icon-container {
+  color: #ffffff;
+}
+
+.stat-card:hover [class^="chart-icon-"],
+.stat-card:hover [class*=" chart-icon-"] {
+  color: #ffffff;
+}
+
+.stat-card:hover .stat-card-title {
+  color: #ffffff;
+}
+
+.stat-card:hover .count {
+  color: #ffffff;
+}
+
+.stat-card .chart-icon-up {
+  color: #8bc38a;
+}
+
+.stat-card .chart-icon-down {
+  color: #fe764b;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.stat-card-1 .icon-container {
+  background-color: #dbeaff;
+  color: #438ffe;
+}
+
+.stat-card-1:hover {
+  background-color: #438ffe;
+}
+
+.stat-card-1:hover .icon-container {
+  background-color: #5c9efe;
+}
+
+.stat-card-2 .icon-container {
+  background-color: #eff7ef;
+  color: #8bc38a;
+}
+
+.stat-card-2:hover {
+  background-color: #8bc38a;
+}
+
+.stat-card-2:hover .icon-container {
+  background-color: #9ccc9b;
+}
+
+.stat-card-3 .icon-container {
+  background-color: #dbeaff;
+  color: #438ffe;
+}
+
+.stat-card-3:hover {
+  background-color: #438ffe;
+}
+
+.stat-card-3:hover .icon-container {
+  background-color: #5c9efe;
+}
+
+.stat-card-4 .icon-container {
+  background-color: #e7f2f2;
+  color: #83bcbd;
+}
+
+.stat-card-4:hover {
+  background-color: #83bcbd;
+}
+
+.stat-card-4:hover .icon-container {
+  background-color: #94c5c6;
+}
+
+.table {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-spacing: 0;
+}
+
+.table .table-cell {
+  padding: 1.5rem;
+}
+
+.table .table-body .table-row {
+  background-color: #f8f8f8;
 }
 
 .bar-container {

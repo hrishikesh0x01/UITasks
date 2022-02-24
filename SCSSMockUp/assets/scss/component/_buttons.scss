@@ -1,1 +1,13 @@
 // Button styles goes here
+
+.btn {
+    border: none;
+    border-radius: $border-radius;
+    color: $btn-color;
+    padding: 0 1rem;
+    @each $type, $color in $theme-colors {
+        &-#{$type} {
+            background-color: $color;
+        }
+    }
+}

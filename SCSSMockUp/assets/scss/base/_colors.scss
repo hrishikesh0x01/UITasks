@@ -1,6 +1,56 @@
 // Colors
+$white: #ffffff;
 
+$theme-colors: (
+    "primary": #438ffe,
+    "success": #8bc38a,
+    "secondary": #fe764b,
+    "info": #83bcbd,
+);
+
+// text
+$text-muted: #abb1bf;
+
+// Body colors
 $body-color: #160e4d;
 $body-bg: #f8f8f8;
+// $body-bg: #000000;
 
 $border-color: #e2e2e2;
+
+//Header colors
+$header-bg-color: $white;
+
+// brand icon
+$brand-icon-color: map-get($theme-colors, "primary");
+$brand-icon-shadow-color: #c7deff;
+
+// searchbar
+$search-bg-color: $body-bg;
+$search-icon-color: $text-muted;
+$search-placeholder-color: $text-muted;
+
+// Notification
+$notif-icon-color: $text-muted;
+
+// badge
+$badge-bg-color: map-get($theme-colors, "secondary");
+
+// sidebar colors
+$sidebar-bg-color: $white;
+$sidebar-icon-color: $text-muted;
+$sidebar-icon-active-color: map-get($theme-colors, "primary");
+
+$sidebar-toggle-bg-color: $white;
+
+// card colors
+$stat-card-color: $text-muted;
+$stat-card-bg-color: $white;
+$stat-card-hover-color: $white;
+
+// buttons
+$btn-color: $white;
+
+// Table
+$table-bg-color: $white;
+$table-row-bg-color: $body-bg;

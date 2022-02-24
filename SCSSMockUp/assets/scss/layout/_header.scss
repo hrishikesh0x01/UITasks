@@ -1,4 +1,69 @@
 // Header area style
 .header {
     height: $header-height;
+    padding: 0 $header-padding-x;
+    background-color: $header-bg-color;
+    border-bottom: $border-common;
+
+    .brand-icon {
+        color: $brand-icon-color;
+        font-size: $brand-icon-size;
+        padding-right: 1.5rem;
+        text-shadow: 2px -2px $white, 7px -7px $brand-icon-shadow-color, 4px -7px $brand-icon-shadow-color, 7px -4px $brand-icon-shadow-color;
+    }
+
+    .notification {
+        .nav-item {
+            padding: 0.125rem;
+            padding-left: 2rem;
+        }
+        .icon {
+            color: $notif-icon-color;
+            font-size: $notif-icon-size;
+        }
+
+        .badge {
+            height: 5px;
+            width: 5px;
+            background-color: $badge-bg-color;
+            border-radius: $border-circle;
+            @include position($top: 0, $right: 0);
+        }
+
+        .profile-img {
+            border-radius: $border-circle;
+            width: $profile-img-size;
+            height: $profile-img-size;
+            margin-right: 0.825rem;
+        }
+
+        .dropdown-icon {
+            font-size: 0.5rem;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// searchbar style
+.search-container {
+    height: $search-bar-height;
+    margin-left: 2.5rem;
+    background-color: $search-bg-color;
+
+    .search-icon {
+        color: $search-icon-color;
+        padding: 0 1rem;
+    }
+
+    #search-input {
+        height: 100%;
+        width: 300px;
+        border: none;
+        border-radius: $border-radius;
+        background-color: $search-bg-color;
+
+        &::placeholder {
+            color: $search-placeholder-color;
+        }
+    }
 }
