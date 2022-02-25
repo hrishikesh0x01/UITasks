@@ -6,7 +6,6 @@
 // Fonts
 $font-size-base: 1rem;
 $font-family: 'Josefin Sans', sans-serif;
-$font-bold: 500;
 
 // Border
 $border-radius: 0;
@@ -19,6 +18,11 @@ $header-sidebar-padding: 2.5rem;
 $header-height: 90px;
 $header-padding-x: $header-sidebar-padding;
 $brand-icon-size: 1.125rem;
+
+// main content
+$table-and-chart-height: 400px;
+$table-height: $table-and-chart-height;
+$chart-height: $table-and-chart-height;
 
 // searchbar
 $search-bar-height: 44px;
@@ -33,8 +37,25 @@ $profile-img-size: 35px;
 $sidebar-icon-size: 1.25rem;
 $sidebar-icon-padding: $header-sidebar-padding;
 
+$sidebar-toggle-border-radius: 8px;
+
 // Card
 $stat-card-font-weight: 300;
 $stat-card-font-size: 1rem;
 
+$stat-card-count-font-size: 2rem;
 $stat-card-count-padding: 0.75rem;
+
+// Table
+$table-img-size: 55px;
+$table-cell-padding-x: 0.75rem;
+
+$table-border-space: 1rem;
+
+// Chart
+$chart-bg-color: $white;
+
+
+
+// Srollbar
+$scrollbar-border-radius: 8px;

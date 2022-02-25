@@ -1,10 +1,17 @@
 .main {
     &-content {
         padding: 2.5rem;
+
+        .statistics {
+            @include for-tablet {
+                flex-wrap: wrap;
+            }
+        }
     }
 
     &-title {
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
     }
+
 }

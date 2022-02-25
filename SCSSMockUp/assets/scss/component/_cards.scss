@@ -1,12 +1,22 @@
 // Card styles goes here
 .card-row {
-    margin-left: -1.25rem;
-    margin: 1rem 0 1rem -1.25rem;
+    margin: 1rem 0 0 -1.5rem;
+
+    @include for-desktop-up {
+        .stat-card-wrapper {
+            width: 50%;
+        }
+    }
+    @include for-landscape-phone {
+        .stat-card-wrapper {
+            width: 100%;
+        }
+    }
 }
 
 .stat-card-wrapper {
     width: 25%;
-    padding-left: 1.5rem;
+    // padding-left: 1.5rem;
 }
 
 .stat-card {
@@ -14,6 +24,8 @@
     color: $stat-card-color;
     background-color: $stat-card-bg-color;
     padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
 
     &-title {
         font-size: $stat-card-font-size;
@@ -21,8 +33,8 @@
     }
 
     .count {
-        font-weight: 500;
-        font-size: 1.75rem;
+        font-weight: 400;
+        font-size: $stat-card-count-font-size;
         color: $body-color;
         padding-bottom: $stat-card-count-padding;
         border-bottom: $border-common;

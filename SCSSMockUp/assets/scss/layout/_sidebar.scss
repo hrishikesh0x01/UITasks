@@ -1,7 +1,7 @@
 // Styles for Sidebar lies here
 .sidebar {
     background-color: $sidebar-bg-color;
-    padding-bottom: 4.25rem;
+    width: 100px;
     transition: all 0.4s;
 
     .nav-item {
@@ -23,23 +23,21 @@
 
 .sidebar-toggle {
     background-color: $white;
-    border-radius: -10px;
-    padding: 0.25rem 0.125rem;
+    padding: 0.5rem 0.25rem;
     top: 50%;
-    left: 100%;
+    left: 100px;
     transform: translateY(-50%);
     .icon {
         transition: all 0.4s;
     }
+    border-top-right-radius: $sidebar-toggle-border-radius;
+    border-bottom-right-radius: $sidebar-toggle-border-radius;
 }
 
 #sidebar-checkbox:checked ~ .sidebar {
     transform: translateX(-100px);
     width: 0;
     .sidebar-toggle {
-        transform-origin: center;
-        transform: translateY(-50%);
-        right: -120px;
         .icon {
             transform: rotate(180deg);
         }

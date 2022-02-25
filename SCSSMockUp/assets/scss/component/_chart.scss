@@ -1,19 +1,87 @@
+.veiws-sells-chart {
+    height: $chart-height;
+    margin-left: 1.5rem;
+    padding: 1rem;
+    width: 35%;
+    background-color: $chart-bg-color;
+
+    @include for-tablet {
+        margin: 0;
+        width: 100%;
+    }
+
+    .chart-title {
+        font-size: 1.125rem;
+    }
+
+    .dropdown {
+        font-size: 0.75rem;
+        .icon {
+            margin-left: 0.5rem;
+            font-size: 0.5rem;
+            transform: rotate(90deg);
+        }
+    }
+
+    .graph-legend {
+        font-size: 0.875rem;
+        font-weight: 500;
+        .legend-icon {
+            height: 1rem;
+            width: 1rem;
+            margin-right: 0.5rem;
+
+            &-views {
+                background-color: $views-bar-color;
+            }
+
+            &-sells {
+                background-color: $sells-bar-color;
+            }
+        }
+    }
+
+    .chart {
+        padding: 1rem;
+    }
+}
+
 .bar-container {
-    width: 5px;
+    width: 1rem;
+    .x-label {
+        @include position(absolute, $bottom: 0);
+        text-align: center
+    }
 }
 
 .bar {
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 5px;
+    @include position(absolute, $bottom: 30px);
 
     &-views {
-        background-color: aquamarine;
-        height: 50%;
+        background-color: $views-bar-color;
     }
 
     &-sells {
-        background-color: blue;
-        height: 70%;
+        background-color: $sells-bar-color;
+    }
+
+    .x-label {
+        @include position(absolute, $bottom: 0);
+    }
+}
+
+$chart-values: ((60, 85), (35, 70), (55, 80), (25, 65), (45, 60), (70, 90), (60, 65));
+
+@for $i from 1 through length($chart-values) {
+    .bar-container-#{$i} {
+        .bar {
+            &-sells {
+                height: 1% * nth(nth($chart-values, $i), 1);
+            }
+            &-views {
+                height: 1% * nth(nth($chart-values, $i), 2);
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ $theme-colors: (
 );
 
 // text
-$text-muted: #abb1bf;
+$text-muted-color: #abb1bf;
 
 // Body colors
 $body-color: #160e4d;
@@ -27,24 +27,24 @@ $brand-icon-shadow-color: #c7deff;
 
 // searchbar
 $search-bg-color: $body-bg;
-$search-icon-color: $text-muted;
-$search-placeholder-color: $text-muted;
+$search-icon-color: $text-muted-color;
+$search-placeholder-color: $text-muted-color;
 
 // Notification
-$notif-icon-color: $text-muted;
+$notif-icon-color: $text-muted-color;
 
 // badge
 $badge-bg-color: map-get($theme-colors, "secondary");
 
 // sidebar colors
 $sidebar-bg-color: $white;
-$sidebar-icon-color: $text-muted;
+$sidebar-icon-color: $text-muted-color;
 $sidebar-icon-active-color: map-get($theme-colors, "primary");
 
 $sidebar-toggle-bg-color: $white;
 
 // card colors
-$stat-card-color: $text-muted;
+$stat-card-color: $text-muted-color;
 $stat-card-bg-color: $white;
 $stat-card-hover-color: $white;
 
@@ -54,3 +54,10 @@ $btn-color: $white;
 // Table
 $table-bg-color: $white;
 $table-row-bg-color: $body-bg;
+
+// Chart
+$views-bar-color: map-get($theme-colors, 'info');
+$sells-bar-color: map-get($theme-colors, 'secondary');
+
+// Scrollbar
+$scrollbar-color: $text-muted-color;

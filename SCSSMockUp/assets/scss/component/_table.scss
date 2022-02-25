@@ -1,11 +1,59 @@
 // Table styles
-.table {
+.table-container {
+    height: $table-height;
+    flex-grow: 1;
     background-color: $table-bg-color;
-    padding: 1rem;
+    margin-bottom: 1.5rem;
+    @include for-tablet {
+        width: 100%;
+    }
+}
+
+.table {
+    // background-color: $table-bg-color;
+    padding: 0 1rem;
     border-spacing: 0;
 
-    .table-cell {
-        padding: 1.5rem;
+    .table-image {
+        height: $table-img-size;
+        width: $table-img-size;
+        overflow: hidden;
+    }
+
+    .table-head {
+        font-size: 1.125rem;
+
+        .table-cell {
+            text-align: left;
+            padding: 1.5rem $table-cell-padding-x;
+            background-color: $white;
+            @include position(sticky, 0);
+        }
+    }
+
+    .table-body {
+        font-weight: 500;
+
+        .table-cell {
+            padding: 1rem $table-cell-padding-x;
+            border-bottom: $table-border-space solid $white;
+        }
+    }
+
+    @include for-portrait-phone {
+        .table-body, .table-head {
+            .table-cell {
+                padding: 0.5rem;
+            }
+        }
+
+        .table-head {
+            font-size: 1rem;
+        }
+
+        .table-body {
+            font-size: 0.75rem;
+        }
     }
 
     .table-body .table-row {

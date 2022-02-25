@@ -61,7 +61,7 @@
             </nav>
         </header>
         <!-- End: Header -->
-        <div class="d-flex flex-grow-1">
+        <div class="d-flex flex-grow-1 overflow-hidden">
             <!-- Start: Sidebar -->
             <input type="checkbox" id="sidebar-checkbox" class="d-none">
             <aside class="d-flex flex-column sidebar position-relative">
@@ -71,7 +71,7 @@
                         <span class="icon icon-arrow"></span>
                     </label>
                 </div>
-                <nav class="flex-grow-1 nav-section">
+                <nav class="nav-section flex-grow-1 overflow-auto-x">
                     <ul class="nav-list">
                         <li class="nav-item">
                             <a href="" class="nav-link active">
@@ -112,7 +112,7 @@
             </aside>
             <!-- End: Sidebar -->
             <!-- Start: main-content -->
-            <main class="d-flex flex-column flex-grow-1 main-content">
+            <main class="d-flex flex-column flex-grow-1 main-content overflow-auto-y">
                 <!-- Main-content title -->
                 <h1 class="main-title">
                     Dashboard
@@ -142,7 +142,7 @@
                                 <div class="d-flex justify-content-center align-items-center icon-container">
                                     <span class="icon icon-cart"></span>
                                 </div>
-                                <span class="icon icon-show-chart chart-icon-up"></span>
+                                <span class="icon icon-show-chart chart-icon-down"></span>
                             </div>
                             <h4 class="stat-card-title">Total Products</h4>
                             <div class="count">10.820</div>
@@ -157,7 +157,7 @@
                                 <div class="d-flex justify-content-center align-items-center icon-container">
                                     <span class="icon icon-shopping-bag"></span>
                                 </div>
-                                <span class="icon icon-show-chart chart-icon-down"></span>
+                                <span class="icon icon-show-chart chart-icon-up"></span>
                             </div>
                             <h4 class="stat-card-title">Total Users</h4>
                             <div class="count">8.425</div>
@@ -181,12 +181,16 @@
                     </div>
                 </div>
                 <!-- End: Card row -->
-                <div class="d-flex justify-content-between flex-grow-1 overflow-hidden">
-                    <div class="product-stock overflow-auto h-100">
-                        <table class="table">
+                <!-- Start: Table and graph container -->
+                <div class="d-flex justify-content-between flex-grow-1 flex-shrink-0 statistics overflow-hidden">
+                    <!-- Table container -->
+                    <div class="table-container overflow-auto">
+                        <!-- Start: Table -->
+                        <table class="table w-100 position-relative">
                             <thead class="table-head">
                                 <tr class="table-row">
                                     <th class="table-cell">No</th>
+                                    <th class="table-cell"></th>
                                     <th class="table-cell">Product Name</th>
                                     <th class="table-cell">Status</th>
                                     <th class="table-cell">Sold</th>
@@ -196,6 +200,11 @@
                             <tbody class="table-body">
                                 <tr class="table-row">
                                     <td class="table-cell">1</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img1.jpg" alt="img1">
+                                        </figure>
+                                    </td>
                                     <td class="table-cell">News Mobile App UI KIT F...</td>
                                     <td class="table-cell">Active</td>
                                     <td class="table-cell">10</td>
@@ -203,6 +212,11 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td class="table-cell">2</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img2.jpg" alt="img1">
+                                        </figure>
+                                    </td>
                                     <td class="table-cell">40+ Landing page Temp...</td>
                                     <td class="table-cell">Active</td>
                                     <td class="table-cell">10</td>
@@ -210,6 +224,11 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td class="table-cell">3</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img3.jpg" alt="img1">
+                                        </figure>
+                                    </td>
                                     <td class="table-cell">Doctor Consultant UI KIT ...</td>
                                     <td class="table-cell">Active</td>
                                     <td class="table-cell">10</td>
@@ -217,6 +236,59 @@
                                 </tr>
                                 <tr class="table-row">
                                     <td class="table-cell">4</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img4.jpg" alt="img1">
+                                        </figure>
+                                    </td>
+                                    <td class="table-cell">Startup Illustration KIT Ve...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">5</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img1.jpg" alt="img1">
+                                        </figure>
+                                    </td>
+                                    <td class="table-cell">News Mobile App UI KIT F...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">6</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img2.jpg" alt="img1">
+                                        </figure>
+                                    </td>
+                                    <td class="table-cell">40+ Landing page Temp...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">7</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img3.jpg" alt="img1">
+                                        </figure>
+                                    </td>
+                                    <td class="table-cell">Doctor Consultant UI KIT ...</td>
+                                    <td class="table-cell">Active</td>
+                                    <td class="table-cell">10</td>
+                                    <td class="table-cell">320</td>
+                                </tr>
+                                <tr class="table-row">
+                                    <td class="table-cell">8</td>
+                                    <td class="table-cell">
+                                        <figure class="d-flex align-items-center table-image">
+                                            <img src="assets/images/table-img4.jpg" alt="img1">
+                                        </figure>
+                                    </td>
                                     <td class="table-cell">Startup Illustration KIT Ve...</td>
                                     <td class="table-cell">Active</td>
                                     <td class="table-cell">10</td>
@@ -224,52 +296,72 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <!-- End: Table -->
                     </div>
-                    <div class="veiws-sells-chart w-25">
+                    <!-- Start: Graph container -->
+                    <div class="d-flex flex-column veiws-sells-chart w-25 h-100">
+                        <!-- Graph title -->
                         <div class="d-flex justify-content-between chart-head">
-                            <span>Views & Sells</span>
-                            <div class="dropdown">This Week</div>
-                        </div>
-                        <div class="d-flex">
-                            <span class="total-views">Total Views</span>
-                            <span class="total-sells">Total Sells</span>
-                        </div>
-                        <div class="d-flex justify-content-around chart h-75">
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
-                            </div>
-                            <div class="position-relative bar-container h-100">
-                                <div class="position-absolute bar bar-sells"></div>
-                                <div class="position-absolute bar bar-views"></div>
+                            <h3 class="chart-title">Views & Sells</h3>
+                            <div class="d-flex align-items-center dropdown">
+                                <span>This Week</span>
+                                <span class="icon icon-arrow"></span>
                             </div>
                         </div>
+                        <!-- Graph legend -->
+                        <div class="d-flex graph-legend">
+                            <span class="d-flex align-items-center graph-legend-item-view">
+                                <div class="legend-icon legend-icon-views"></div>
+                                Total Views
+                            </span>
+                            <span class="d-flex align-items-center">
+                                <div class="legend-icon legend-icon-sells"></div>
+                                Total Sells
+                            </span>
+                        </div>
+                        <!-- Start: Graph body -->
+                        <div class="d-flex justify-content-around flex-grow-1 chart">
+                            <div class="position-relative bar-container bar-container-1 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">M</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-2 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">T</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-3 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">W</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-4 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">T</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-5 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">F</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-6 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">S</span>
+                            </div>
+                            <div class="position-relative bar-container bar-container-7 h-100">
+                                <div class="bar bar-views"></div>
+                                <div class="bar bar-sells"></div>
+                                <span class="x-label">S</span>
+                            </div>
+                        </div>
+                        <!-- End: Graph body -->
                     </div>
+                    <!-- End: Graph container -->
                 </div>
+                <!-- End: Table and graph container -->
             </main>
             <!-- End: main-content -->
         </div>
