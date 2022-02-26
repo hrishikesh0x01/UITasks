@@ -3,9 +3,9 @@
     height: $table-height;
     flex-grow: 1;
     background-color: $table-bg-color;
-    margin-bottom: 1.5rem;
     @include for-tablet {
         width: 100%;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -41,7 +41,8 @@
     }
 
     @include for-portrait-phone {
-        .table-body, .table-head {
+        .table-body,
+        .table-head {
             .table-cell {
                 padding: 0.5rem;
             }

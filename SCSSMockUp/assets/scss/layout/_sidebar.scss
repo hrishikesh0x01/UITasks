@@ -2,7 +2,7 @@
 .sidebar {
     background-color: $sidebar-bg-color;
     width: 100px;
-    transition: all 0.4s;
+    transition: all ease-in-out 0.4s;
 
     .nav-item {
         margin: $sidebar-icon-padding * 0.5;
@@ -19,6 +19,27 @@
             color: $sidebar-icon-active-color;
         }
     }
+
+    @include for-landscape-phone {
+        transform: translateX(-76px);
+        width: 0;
+
+        .nav-item {
+            margin: $sidebar-icon-sm-padding * 0.5;
+        }
+        .nav-link {
+            font-size: $sidebar-icon-size;
+            color: $sidebar-icon-color;
+
+            .icon {
+                padding: $sidebar-icon-sm-padding * 0.5;
+            }
+
+            &.active {
+                color: $sidebar-icon-active-color;
+            }
+        }
+    }
 }
 
 .sidebar-toggle {
@@ -28,10 +49,19 @@
     left: 100px;
     transform: translateY(-50%);
     .icon {
-        transition: all 0.4s;
+        transition: all ease-in-out 0.4s;
     }
     border-top-right-radius: $sidebar-toggle-border-radius;
     border-bottom-right-radius: $sidebar-toggle-border-radius;
+
+    @include for-landscape-phone {
+        left: 76px;
+        .sidebar-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
 }
 
 #sidebar-checkbox:checked ~ .sidebar {
@@ -40,6 +70,16 @@
     .sidebar-toggle {
         .icon {
             transform: rotate(180deg);
+        }
+    }
+
+    @include for-landscape-phone {
+        width: 76px;
+        transform: translateX(0);
+        .sidebar-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
         }
     }
 }

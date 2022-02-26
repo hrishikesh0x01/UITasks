@@ -24,7 +24,8 @@ body {
     background-color: $body-bg;
 }
 
-button, input {
+button,
+input {
     font-family: $font-family;
     outline: none;
 }
@@ -39,7 +40,7 @@ ul {
 }
 
 .icon {
-  display: block;
+    display: block;
 }
 
 .d- {

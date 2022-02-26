@@ -5,6 +5,12 @@
     border-radius: $border-radius;
     color: $btn-color;
     padding: 0 1rem;
+    transition: all ease-in-out 0.4s;
+
+    @include for-landscape-phone {
+        padding: 0 0.5rem;
+    }
+
     @each $type, $color in $theme-colors {
         &-#{$type} {
             background-color: $color;

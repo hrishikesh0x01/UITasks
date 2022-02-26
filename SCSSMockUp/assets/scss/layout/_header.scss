@@ -5,17 +5,30 @@
     background-color: $header-bg-color;
     border-bottom: $border-common;
 
+    @include for-landscape-phone {
+        padding: 0 $header-sidebar-sm-padding;
+    }
+
     .brand-icon {
         color: $brand-icon-color;
         font-size: $brand-icon-size;
         padding-right: 1.5rem;
-        text-shadow: 2px -2px $white, 7px -7px $brand-icon-shadow-color, 4px -7px $brand-icon-shadow-color, 7px -4px $brand-icon-shadow-color;
+        text-shadow: 2px -2px $white, 7px -7px $brand-icon-shadow-color, 4px -7px $brand-icon-shadow-color,
+            7px -4px $brand-icon-shadow-color;
+
+        @include for-tablet {
+            padding-right: 0.5rem;
+        }
     }
 
     .notification {
         .nav-item {
             padding: 0.125rem;
             padding-left: 2rem;
+
+            @include for-landscape-phone {
+                padding-left: 1rem;
+            }
         }
         .icon {
             color: $notif-icon-color;
@@ -50,6 +63,10 @@
     margin-left: 2.5rem;
     background-color: $search-bg-color;
 
+    @include for-landscape-phone {
+        margin-left: 1.5rem;
+    }
+
     .search-icon {
         color: $search-icon-color;
         padding: 0 1rem;
@@ -61,9 +78,17 @@
         border: none;
         border-radius: $border-radius;
         background-color: $search-bg-color;
+        transition: all ease-in-out 0.4s;
 
         &::placeholder {
             color: $search-placeholder-color;
+        }
+
+        @include for-landscape-phone {
+            width: 0;
+            &:focus {
+                width: 35vw;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
 
 // Fonts
 $font-size-base: 1rem;
-$font-family: 'Josefin Sans', sans-serif;
+$font-family: "Josefin Sans", sans-serif;
 
 // Border
 $border-radius: 0;
@@ -13,10 +13,12 @@ $border-circle: 100%;
 $border-common: 1px solid $border-color;
 
 $header-sidebar-padding: 2.5rem;
+$header-sidebar-sm-padding: 1.75rem;
 
 // Header
 $header-height: 90px;
 $header-padding-x: $header-sidebar-padding;
+$header-sm-padding-x: $header-sidebar-sm-padding;
 $brand-icon-size: 1.125rem;
 
 // main content
@@ -36,6 +38,7 @@ $profile-img-size: 35px;
 // Sidebar
 $sidebar-icon-size: 1.25rem;
 $sidebar-icon-padding: $header-sidebar-padding;
+$sidebar-icon-sm-padding: $header-sidebar-sm-padding;
 
 $sidebar-toggle-border-radius: 8px;
 
@@ -54,8 +57,6 @@ $table-border-space: 1rem;
 
 // Chart
 $chart-bg-color: $white;
-
-
 
 // Srollbar
 $scrollbar-border-radius: 8px;

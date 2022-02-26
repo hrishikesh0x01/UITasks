@@ -1,22 +1,25 @@
+$cards: (
+    "stat-card-1": map-get($theme-colors, "primary"),
+    "stat-card-2": map-get($theme-colors, "success"),
+    "stat-card-3": map-get($theme-colors, "primary"),
+    "stat-card-4": map-get($theme-colors, "info"),
+);
+
 // Card styles goes here
 .card-row {
     margin: 1rem 0 0 -1.5rem;
+    transition: all ease-in-out 0.4s;
+    .stat-card-wrapper {
+        width: 25%;
 
-    @include for-desktop-up {
-        .stat-card-wrapper {
+        @include for-desktop-up {
             width: 50%;
         }
-    }
-    @include for-landscape-phone {
-        .stat-card-wrapper {
+
+        @include for-portrait-phone {
             width: 100%;
         }
     }
-}
-
-.stat-card-wrapper {
-    width: 25%;
-    // padding-left: 1.5rem;
 }
 
 .stat-card {
@@ -26,10 +29,13 @@
     padding: 1rem;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
+    transition: all ease-in-out 0.4s;
 
     &-title {
         font-size: $stat-card-font-size;
         font-weight: $stat-card-font-weight;
+        color: $stat-card-color;
+        transition: color ease-in-out 0.4s;
     }
 
     .count {
@@ -38,21 +44,48 @@
         color: $body-color;
         padding-bottom: $stat-card-count-padding;
         border-bottom: $border-common;
+        transition: all ease-in-out 0.4s;
     }
 
     .card-bottom-text {
         padding-top: 0.75rem;
         font-size: $stat-card-font-size;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .card-icons {
         font-size: 1.75rem;
         padding-bottom: 1.25rem;
+        transition: all ease-in-out 0.4s;
     }
 
     .icon-container {
         width: 60px;
         height: 60px;
+        transition: all ease-in-out 0.4s;
+    }
+
+    [class^="chart-icon-"],
+    [class*=" chart-icon-"] {
+        transition: all ease-in-out 0.4s;
+    }
+
+    @each $card, $color in $cards {
+        &.#{$card} {
+            .icon-container {
+                background-color: lighten($color, 30%);
+                color: $color;
+            }
+
+            &:hover {
+                background-color: $color;
+                .icon-container {
+                    background-color: lighten($color, 5%);
+                }
+            }
+        }
     }
 
     &:hover {
@@ -83,29 +116,6 @@
         &down {
             color: map-get($theme-colors, "secondary");
             transform: scaleX(-1);
-        }
-    }
-}
-
-$cards: (
-    "stat-card-1": map-get($theme-colors, "primary"),
-    "stat-card-2": map-get($theme-colors, "success"),
-    "stat-card-3": map-get($theme-colors, "primary"),
-    "stat-card-4": map-get($theme-colors, "info"),
-);
-
-@each $card, $color in $cards {
-    .#{$card} {
-        .icon-container {
-            background-color: lighten($color, 30%);
-            color: $color;
-        }
-
-        &:hover {
-            background-color: $color;
-            .icon-container {
-                background-color: lighten($color, 5%);
-            }
         }
     }
 }

@@ -56,8 +56,8 @@ $table-bg-color: $white;
 $table-row-bg-color: $body-bg;
 
 // Chart
-$views-bar-color: map-get($theme-colors, 'info');
-$sells-bar-color: map-get($theme-colors, 'secondary');
+$views-bar-color: map-get($theme-colors, "info");
+$sells-bar-color: map-get($theme-colors, "secondary");
 
 // Scrollbar
 $scrollbar-color: $text-muted-color;

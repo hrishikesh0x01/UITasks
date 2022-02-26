@@ -8,54 +8,37 @@
     left: $left;
 }
 
-// // media query mixins
-// // XX-Large devices (larger desktops)
-// // No media query since the xxl breakpoint has no upper bound on its width
+// media query mixins
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
 
-// @mixin for-big-desktop-up {
-//     // X-Large devices (large desktops, less than 1400px)
-//     @media (max-width: 1400px) {
-//         @content;
-//     }
-// }
-// @mixin for-desktop-up {
-//     // Large devices (desktops, less than 1200px)
-//     @media (max-width: 1200px) {
-//         @content;
-//     }
-// }
-// @mixin for-tablet {
-//     // Medium devices (tablets, less than 992px)
-//     @media (max-width: 992px) {
-//         @content;
-//     }
-// }
-// @mixin for-landscape-phone {
-//     // Small devices (landscape phones, less than 768px)
-//     @media (max-width: 768px) {
-//         @content;
-//     }
-// }
-// @mixin for-portrait-phone {
-//     // X-Small devices (portrait phones, less than 576px)
-//     @media (max-width: 576px) {
-//         @content;
-//     }
-// }
-
-
-$breakpoints: (
-    big-desktop-up: 1400px,
-    desktop-up: 1200px,
-    tablet: 992px,
-    landscape-phone: 768px,
-    portrait-phone: 576px,
-);
-
-@each $disp, $breakpoint in $breakpoints {
-    @mixin for-#{$disp} {
-        @media (max-width: $breakpoint) {
-            @content;
-        }
+@mixin for-big-desktop-up {
+    // X-Large devices (large desktops, less than 1400px)
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    // Large devices (desktops, less than 1200px)
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-tablet {
+    // Medium devices (tablets, less than 992px)
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+@mixin for-landscape-phone {
+    // Small devices (landscape phones, less than 768px)
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin for-portrait-phone {
+    // X-Small devices (portrait phones, less than 576px)
+    @media (max-width: 576px) {
+        @content;
     }
 }
