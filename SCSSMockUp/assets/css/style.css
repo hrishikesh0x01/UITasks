@@ -224,9 +224,17 @@ ul {
   border-bottom: 1px solid #e2e2e2;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header {
     padding: 0 1.75rem;
+    height: 78.75px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    height: 67.5px;
+    padding: 0 0.875rem;
   }
 }
 
@@ -237,9 +245,10 @@ ul {
   text-shadow: 2px -2px #ffffff, 7px -7px #c7deff, 4px -7px #c7deff, 7px -4px #c7deff;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .header .brand-icon {
-    padding-right: 0.5rem;
+    font-size: 0.70312rem;
+    text-shadow: 1px -1px #ffffff, 3px -3px #c7deff, 2px -3px #c7deff, 3px -2px #c7deff;
   }
 }
 
@@ -248,9 +257,15 @@ ul {
   padding-left: 2rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header .notification .nav-item {
     padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .notification .nav-item {
+    padding-left: 0.75rem;
   }
 }
 
@@ -286,12 +301,19 @@ ul {
 
 .search-container {
   height: 44px;
-  margin-left: 2.5rem;
+  margin-left: 3.5rem;
   background-color: #f8f8f8;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .search-container {
+    margin-left: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search-container {
+    height: 33px;
     margin-left: 1.5rem;
   }
 }
@@ -327,12 +349,12 @@ ul {
   color: #abb1bf;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .search-container #search-input {
     width: 0;
   }
   .search-container #search-input:focus {
-    width: 35vw;
+    width: 30vw;
   }
 }
 
@@ -340,7 +362,13 @@ ul {
   padding: 2.5rem;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .main-content .statistics {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -355,8 +383,8 @@ ul {
 .sidebar {
   background-color: #ffffff;
   width: 100px;
-  -webkit-transition: all ease-in-out .4s;
-  transition: all ease-in-out .4s;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 
 .sidebar .nav-item {
@@ -376,7 +404,7 @@ ul {
   color: #438ffe;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .sidebar {
     -webkit-transform: translateX(-76px);
             transform: translateX(-76px);
@@ -385,37 +413,62 @@ ul {
   .sidebar .nav-item {
     margin: 0.875rem;
   }
-  .sidebar .nav-link {
-    font-size: 1.25rem;
-    color: #abb1bf;
-  }
   .sidebar .nav-link .icon {
     padding: 0.875rem;
   }
-  .sidebar .nav-link.active {
-    color: #438ffe;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    -webkit-transform: translateX(-43px);
+            transform: translateX(-43px);
+    width: 0;
+  }
+  .sidebar .nav-item {
+    margin: 0.4375rem;
+  }
+  .sidebar .nav-link {
+    font-size: 0.9375rem;
+    color: #abb1bf;
+  }
+  .sidebar .nav-link .icon {
+    padding: 0.4375rem;
   }
 }
 
 .sidebar-toggle {
   background-color: #ffffff;
-  padding: 0.5rem 0.25rem;
+  width: 32px;
+  height: 32px;
   top: 50%;
   left: 100px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border: 2px solid #160e4d;
+  border-radius: 100%;
 }
 
 .sidebar-toggle .icon {
-  -webkit-transition: all ease-in-out .4s;
-  transition: all ease-in-out .4s;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .sidebar-toggle {
+    font-size: 0.75rem;
+    width: 20px;
+    height: 20px;
     left: 76px;
+  }
+  .sidebar-toggle .sidebar-toggle .icon {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-toggle {
+    left: 43px;
   }
   .sidebar-toggle .sidebar-toggle .icon {
     -webkit-transform: rotate(180deg);
@@ -434,15 +487,11 @@ ul {
           transform: rotate(180deg);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #sidebar-checkbox:checked ~ .sidebar {
     width: 76px;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-  }
-  #sidebar-checkbox:checked ~ .sidebar .sidebar-toggle .icon {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
   }
 }
 
@@ -451,11 +500,11 @@ ul {
   border-radius: 0;
   color: #ffffff;
   padding: 0 1rem;
-  -webkit-transition: all ease-in-out .4s;
-  transition: all ease-in-out .4s;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .btn {
     padding: 0 0.5rem;
   }
@@ -487,13 +536,13 @@ ul {
   width: 25%;
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .card-row .stat-card-wrapper {
     width: 50%;
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .card-row .stat-card-wrapper {
     width: 100%;
   }
@@ -640,14 +689,14 @@ ul {
 }
 
 .table-container {
-  height: 400px;
+  height: 480px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-color: #ffffff;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .table-container {
     width: 100%;
     margin-bottom: 1.5rem;
@@ -679,6 +728,7 @@ ul {
   right: auto;
   bottom: auto;
   left: auto;
+  white-space: nowrap;
 }
 
 .table .table-body {
@@ -688,9 +738,11 @@ ul {
 .table .table-body .table-cell {
   padding: 1rem 0.75rem;
   border-bottom: 1rem solid #ffffff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .table .table-body .table-cell,
   .table .table-head .table-cell {
     padding: 0.5rem;
@@ -708,14 +760,14 @@ ul {
 }
 
 .veiws-sells-chart {
-  height: 400px;
+  height: 480px;
   margin-left: 1.5rem;
   padding: 1rem;
   width: 35%;
   background-color: #ffffff;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .veiws-sells-chart {
     margin: 0;
     width: 100%;

@@ -2,6 +2,7 @@
 .sidebar {
     background-color: $sidebar-bg-color;
     width: 100px;
+    // box-shadow: 1px 1px 5px 1px $sidebar-toggle-shadow-color;
     transition: all ease-in-out 0.4s;
 
     .nav-item {
@@ -20,7 +21,7 @@
         }
     }
 
-    @include for-landscape-phone {
+    @include for-size(portrait-tablet) {
         transform: translateX(-76px);
         width: 0;
 
@@ -28,15 +29,24 @@
             margin: $sidebar-icon-sm-padding * 0.5;
         }
         .nav-link {
-            font-size: $sidebar-icon-size;
-            color: $sidebar-icon-color;
-
             .icon {
                 padding: $sidebar-icon-sm-padding * 0.5;
             }
+        }
+    }
+    @include for-size(landscape-phone) {
+        transform: translateX(-43px);
+        width: 0;
 
-            &.active {
-                color: $sidebar-icon-active-color;
+        .nav-item {
+            margin: $sidebar-icon-sm-padding * 0.25;
+        }
+        .nav-link {
+            font-size: $sidebar-icon-size * 0.75;
+            color: $sidebar-icon-color;
+
+            .icon {
+                padding: $sidebar-icon-sm-padding * 0.25;
             }
         }
     }
@@ -44,18 +54,31 @@
 
 .sidebar-toggle {
     background-color: $white;
-    padding: 0.5rem 0.25rem;
+    width: 32px;
+    height: 32px;
     top: 50%;
     left: 100px;
     transform: translateY(-50%);
+    border: 2px solid $body-color;
+    border-radius: $border-circle;
     .icon {
         transition: all ease-in-out 0.4s;
     }
-    border-top-right-radius: $sidebar-toggle-border-radius;
-    border-bottom-right-radius: $sidebar-toggle-border-radius;
 
-    @include for-landscape-phone {
+    @include for-size(portrait-tablet) {
+        font-size: 0.75rem;
+        width: 20px;
+        height: 20px;
         left: 76px;
+        .sidebar-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    @include for-size(landscape-phone) {
+        left: 43px;
         .sidebar-toggle {
             .icon {
                 transform: rotate(180deg);
@@ -73,13 +96,8 @@
         }
     }
 
-    @include for-landscape-phone {
+    @include for-size(portrait-tablet) {
         width: 76px;
         transform: translateX(0);
-        .sidebar-toggle {
-            .icon {
-                transform: rotate(180deg);
-            }
-        }
     }
 }

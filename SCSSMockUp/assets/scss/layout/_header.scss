@@ -5,8 +5,14 @@
     background-color: $header-bg-color;
     border-bottom: $border-common;
 
-    @include for-landscape-phone {
+    @include for-size(portrait-tablet) {
         padding: 0 $header-sidebar-sm-padding;
+        height: $header-height * 0.875;
+    }
+
+    @include for-size(landscape-phone) {
+        height: $header-height * 0.75;
+        padding: 0 $header-sidebar-sm-padding * 0.5;
     }
 
     .brand-icon {
@@ -16,8 +22,10 @@
         text-shadow: 2px -2px $white, 7px -7px $brand-icon-shadow-color, 4px -7px $brand-icon-shadow-color,
             7px -4px $brand-icon-shadow-color;
 
-        @include for-tablet {
-            padding-right: 0.5rem;
+        @include for-size(landscape-phone) {
+            font-size: $brand-icon-size * 0.625;
+            text-shadow: 1px -1px $white, 3px -3px $brand-icon-shadow-color, 2px -3px $brand-icon-shadow-color,
+                3px -2px $brand-icon-shadow-color;
         }
     }
 
@@ -26,10 +34,15 @@
             padding: 0.125rem;
             padding-left: 2rem;
 
-            @include for-landscape-phone {
+            @include for-size(portrait-tablet) {
                 padding-left: 1rem;
             }
+
+            @include for-size(landscape-phone) {
+                padding-left: 0.75rem;
+            }
         }
+
         .icon {
             color: $notif-icon-color;
             font-size: $notif-icon-size;
@@ -60,10 +73,15 @@
 // searchbar style
 .search-container {
     height: $search-bar-height;
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
     background-color: $search-bg-color;
 
-    @include for-landscape-phone {
+    @include for-size(portrait-tablet) {
+        margin-left: 2.5rem;
+    }
+
+    @include for-size(landscape-phone) {
+        height: $search-bar-height * 0.75;
         margin-left: 1.5rem;
     }
 
@@ -84,10 +102,10 @@
             color: $search-placeholder-color;
         }
 
-        @include for-landscape-phone {
+        @include for-size(portrait-tablet) {
             width: 0;
             &:focus {
-                width: 35vw;
+                width: 30vw;
             }
         }
     }

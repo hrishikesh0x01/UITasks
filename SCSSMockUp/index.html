@@ -26,7 +26,7 @@
                         <span class="search-icon icon icon-search"></span>
                     </label>
                     <input type="text" name="search-text" id="search-input" placeholder="Search">
-                    <button type="button" class="btn btn-primary h-100">Search</button>
+                    <button type="button" id="search-btn" class="btn btn-primary h-100">Search</button>
                 </div>
                 <!-- End: Search -->
             </div>
@@ -34,27 +34,26 @@
                 <!-- Nav list header -->
                 <ul class="d-flex align-items-center nav-list">
                     <li class="nav-item position-relative">
-                        <div class="badge"></div>
                         <a href="#" class="nav-link">
+                            <div class="badge"></div>
                             <span class="icon icon-messages">
                             </span>
                         </a>
                     </li>
                     <li class="nav-item position-relative">
-                        <div class="badge"></div>
                         <a href="#" class="nav-link">
+                            <div class="badge"></div>
                             <span class="icon icon-bell">
                             </span>
                         </a>
                     </li>
                     <!-- Profile image -->
                     <li class="d-flex align-items-center nav-item">
-                        <figure class="d-flex align-items-center profile-img overflow-hidden">
-                            <img src="assets/images/profile-img.jpg" alt="">
-                        </figure>
                         <a href="#" class="">
-                            <span class="dropdown-icon icon icon-arrow">
-                            </span>
+                            <figure class="d-flex align-items-center profile-img overflow-hidden">
+                                <img src="assets/images/profile-img.jpg" alt="">
+                            </figure>
+                            <span class="dropdown-icon icon icon-arrow"></span>
                         </a>
                     </li>
                 </ul>
@@ -66,7 +65,7 @@
             <input type="checkbox" id="sidebar-checkbox" class="d-none">
             <aside class="d-flex flex-column sidebar position-relative">
                 <!-- Sidebar toggle button -->
-                <div class="sidebar-toggle position-absolute">
+                <div class="d-flex justify-content-center align-items-center sidebar-toggle position-absolute">
                     <label for="sidebar-checkbox">
                         <span class="icon icon-arrow"></span>
                     </label>
@@ -148,7 +147,7 @@
                             </div>
                             <h4 class="stat-card-title">Total Products</h4>
                             <div class="count">10.820</div>
-                            <span class="card-bottom-text"><a href="">#+ Add New Product</a></span>
+                            <span class="card-bottom-text"><a href="#">+ Add New Product</a></span>
                         </div>
                     </div>
                     <!-- Card wrapper -->

@@ -2,8 +2,12 @@
     &-content {
         padding: 2.5rem;
 
+        @include for-size(portrait-tablet) {
+            padding: 1.5rem;
+        }
+
         .statistics {
-            @include for-tablet {
+            @include for-size(landscape-tablet) {
                 flex-wrap: wrap;
             }
         }

@@ -5,7 +5,7 @@
     width: 35%;
     background-color: $chart-bg-color;
 
-    @include for-tablet {
+    @include for-size(landscape-tablet) {
         margin: 0;
         width: 100%;
     }
