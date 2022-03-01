@@ -1,1 +1,100 @@
 // Table styles
+.table-container {
+    flex-grow: 1;
+    min-height: 400px;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0 2px;
+
+    tr {
+        background-color: $table-bg-color;
+    }
+
+    .item-img {
+        height: $table-img-size;
+        width: $table-img-size;
+        overflow: hidden;
+    }
+
+    .store-logo {
+        width: 70px;
+
+        @include for-size(portrait-phone) {
+            width: 50px;
+        }
+    }
+
+    thead {
+        font-size: 0.875rem;
+
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+
+        .sort-icon {
+            font-size: 0.625rem;
+            padding: 0 0.25rem;
+        }
+
+        th {
+            font-weight: 400;
+            text-align: left;
+            color: $table-head-font-color;
+            padding: 1.25rem 1rem;
+            background-color: $white;
+            @include position(sticky, 0);
+            white-space: nowrap;
+
+            @include for-size(portrait-phone) {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    }
+
+    tbody {
+        font-size: 0.875rem;
+        font-weight: 400;
+
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+
+        .item-name {
+            font-weight: 500;
+            padding-left: 0.5rem;
+        }
+
+        td {
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+            color: $table-body-font-color;
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include for-size(portrait-phone) {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        .type-cell {
+            border-radius: 25px;
+            padding: 0.25rem 0.75rem;
+
+            @each $type, $colors in $order-types {
+                &.#{$type} {
+                    color: nth($colors, 1);
+                    background-color: nth($colors, 2);
+                }
+            }
+        }
+    }
+}

@@ -3,14 +3,31 @@
 // Spacer for specifying spacing
 // $spacer: 1rem;
 
+$sidebar-brand-logo-width: 200px;
+
 // Fonts
 $font-size-base: 1rem;
-$font-family: "Josefin Sans", sans-serif;
+$font-family: "Poppins", sans-serif;
 
 // Border
-$border-radius: 0;
+$border-radius: 6px;
 $border-circle: 100%;
 $border-common: 1px solid $border-color;
 
 // Srollbar
 $scrollbar-border-radius: 8px;
+
+// Header
+$header-height: 80px;
+$profile-img-size: 35px;
+$brand-logo-width: $sidebar-brand-logo-width;
+
+// sidebar
+$sidebar-width: $sidebar-brand-logo-width;
+$sidebar-width-closed: 84px;
+
+// Table
+$table-img-size: 20px;
+
+// Extras
+$transition-common: all ease-in-out 0.4s;

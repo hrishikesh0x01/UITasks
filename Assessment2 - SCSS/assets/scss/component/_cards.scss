@@ -1,1 +1,90 @@
 // Card styles goes here
+.cards-row {
+    margin-right: -1.5rem;
+
+    @include for-size(big-desktop-up) {
+        margin-bottom: -1.5rem;
+    }
+}
+
+.card-wrapper {
+    width: 16.66%;
+
+    @include for-size(big-desktop-up) {
+        width: 33.33%;
+    }
+
+    @include for-size(landscape-tablet) {
+        width: 50%;
+    }
+
+    @include for-size(landscape-phone) {
+        width: 100%;
+    }
+
+    .card {
+        white-space: nowrap;
+        background-color: $card-bg-color;
+        padding: 1rem;
+        margin-right: 1.25rem;
+        border-radius: $border-radius;
+        transition: $transition-common;
+
+        @include for-size(big-desktop-up) {
+            margin-bottom: 1.25rem;
+        }
+
+        &-title {
+            color: $text-muted-color;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: $transition-common;
+        }
+
+        .count {
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: $transition-common;
+        }
+    }
+    .icon-container {
+        width: 55px;
+        height: 55px;
+        border-radius: $border-circle;
+        transition: $transition-common;
+
+        .icon {
+            font-size: 1.25rem;
+            transition: $transition-common;
+        }
+    }
+
+    @each $name, $colors in $card-colors {
+        .card-#{$name} {
+            .icon-container {
+                background-color: nth($colors, 2);
+
+                .icon {
+                    color: nth($colors, 1);
+                }
+            }
+
+            &:hover {
+                background-color: nth($colors, 1);
+
+                .card-title,
+                .count {
+                    color: $card-hover-color;
+                }
+
+                .icon-container {
+                    background-color: lighten(nth($colors, 1), 5%);
+
+                    .icon {
+                        color: $card-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}

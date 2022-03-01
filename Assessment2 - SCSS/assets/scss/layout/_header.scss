@@ -1,1 +1,101 @@
 // Header area style
+.header {
+    flex: 0 0 $header-height;
+    background-color: $header-bg-color;
+    padding-right: 1.5rem;
+    border-bottom: 2px solid $border-color;
+
+    @include for-size(landscape-phone) {
+        .header-nav {
+            display: none;
+        }
+    }
+
+    .brand-logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        flex: 0 0 $brand-logo-width;
+
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $brand-logo-width * 0.75;
+            font-size: 1.125rem;
+        }
+
+        @include for-size(portrait-phone) {
+            flex: 0 0 $brand-logo-width * 0.5;
+            font-size: 0.875rem;
+        }
+    }
+
+    .sidebar-toggle-label {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+
+        @include for-size(portrait-tablet) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .title {
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        @include for-size(portrait-tablet) {
+            font-size: 1rem;
+        }
+
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .profile-img {
+        width: $profile-img-size;
+        height: $profile-img-size;
+        border-radius: $border-circle;
+        margin: 0 1.25rem 0 0.75rem;
+
+        @include for-size(portrait-tablet) {
+            width: $profile-img-size * 0.875;
+            height: $profile-img-size * 0.875;
+            margin: 0 1rem 0 0.5rem;
+        }
+    }
+
+    .nav-item {
+        padding-left: 1rem;
+        font-weight: 500;
+
+        @include for-size(portrait-tablet) {
+            padding-left: 0.75rem;
+        }
+
+        .icon {
+            color: $header-icon-color;
+            font-size: 1.25rem;
+
+            @include for-size(portrait-tablet) {
+                font-size: 1rem;
+            }
+        }
+
+        .username {
+            font-size: 1rem;
+
+            @include for-size(portrait-tablet) {
+                font-size: 0.875rem;
+            }
+        }
+
+        .dropdown {
+            font-size: 0.625rem;
+            transform: rotate(90deg);
+            padding: 0 0.75rem;
+
+            @include for-size(portrait-tablet) {
+                font-size: 0.5rem;
+                padding: 0 0.625rem;
+            }
+        }
+    }
+}

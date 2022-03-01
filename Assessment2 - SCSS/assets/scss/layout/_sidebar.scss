@@ -1,1 +1,101 @@
 // Styles for Sidebar lies here
+#sidebarToggle {
+    ~ .sidebar {
+        flex: 0 0 $sidebar-width;
+        background-color: $sidebar-bg-color;
+
+        transition: $transition-common;
+
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $sidebar-width * 0.75;
+        }
+
+        @include for-size(landscape-phone) {
+            flex: 0 0 $sidebar-width-closed * 0.75;
+
+            .nav-section-title,
+            .link-text {
+                transform: translateX(100%);
+            }
+        }
+
+        .nav-section {
+            padding-bottom: 1.75rem;
+
+            &-title {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 1.5rem 1.75rem 0.75rem;
+                transition: $transition-common;
+
+                @include for-size(portrait-tablet) {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .nav-link {
+            padding: 1rem 1.625rem;
+            color: $text-muted-color;
+            border-left: 4px solid $sidebar-bg-color;
+            transition: $transition-common;
+
+            @include for-size(portrait-tablet) {
+                padding: 0.75rem 1.25rem;
+            }
+
+            .icon {
+                font-size: 1.125rem;
+                padding-right: 1.25rem;
+                color: $sidebar-icon-color;
+                transition: $transition-common;
+
+                @include for-size(portrait-tablet) {
+                    font-size: 0.875rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            &:hover,
+            &.active {
+                color: $sidebar-nav-item-hover-color;
+                border-color: $sidebar-nav-item-hover-color;
+                background-color: $sidebar-nav-item-hover-bg-color;
+
+                .icon {
+                    color: $sidebar-nav-item-hover-color;
+                }
+            }
+        }
+
+        .link-text {
+            flex: 0 0 $sidebar-width;
+            font-size: 0.875rem;
+            transition: $transition-common;
+        }
+    }
+
+    &:checked ~ .sidebar {
+        flex: 0 0 $sidebar-width-closed;
+
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $sidebar-width-closed * 0.75;
+        }
+
+        .nav-section-title,
+        .link-text {
+            transform: translateX(100%);
+        }
+
+        @include for-size(landscape-phone) {
+            flex: 0 0 $sidebar-width * 0.75;
+
+            .nav-section-title,
+            .link-text {
+                transform: translateX(0);
+            }
+        }
+    }
+}
