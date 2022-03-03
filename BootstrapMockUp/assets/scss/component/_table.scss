@@ -1,0 +1,66 @@
+// Table styles
+.table-container {
+    height: $table-height;
+    flex-grow: 1;
+    background-color: $table-bg-color;
+    @include for-size(portrait-tablet) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.table {
+    // background-color: $table-bg-color;
+    padding: 0 1rem;
+    border-spacing: 0;
+
+    .table-image {
+        height: $table-img-size;
+        width: $table-img-size;
+        overflow: hidden;
+    }
+
+    .table-head {
+        font-size: 1.125rem;
+
+        .table-cell {
+            text-align: left;
+            padding: 1.5rem $table-cell-padding-x;
+            background-color: $white;
+            @include position(sticky, 0);
+            white-space: nowrap;
+        }
+    }
+
+    .table-body {
+        font-weight: 500;
+
+        .table-cell {
+            padding: 1rem $table-cell-padding-x;
+            border-bottom: $table-border-space solid $white;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    @include for-size(landscape-tablet) {
+        .table-body,
+        .table-head {
+            .table-cell {
+                padding: 0.5rem;
+            }
+        }
+
+        .table-head {
+            font-size: 1rem;
+        }
+
+        .table-body {
+            font-size: 0.75rem;
+        }
+    }
+
+    .table-body .table-row {
+        background-color: $table-row-bg-color;
+    }
+}

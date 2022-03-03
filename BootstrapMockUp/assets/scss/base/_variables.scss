@@ -1,0 +1,62 @@
+// All the SCSS Variables goes here
+
+// Spacer for specifying spacing
+// $spacer: 1rem;
+
+// Fonts
+$font-size-base: 1rem;
+$font-family: "Josefin Sans", sans-serif;
+
+// Border
+$border-radius: 0;
+$border-circle: 100%;
+$border-common: 1px solid $border-color;
+
+$header-sidebar-padding: 2.5rem;
+$header-sidebar-sm-padding: 1.75rem;
+
+// Header
+$header-height: 90px;
+$header-padding-x: $header-sidebar-padding;
+$header-sm-padding-x: $header-sidebar-sm-padding;
+$brand-icon-size: 1.125rem;
+
+// main content
+$table-and-chart-height: 480px;
+$table-height: $table-and-chart-height;
+$chart-height: $table-and-chart-height;
+
+// searchbar
+$search-bar-height: 44px;
+
+// notification
+$notif-icon-size: 1.125rem;
+
+// profile image
+$profile-img-size: 35px;
+
+// Sidebar
+$sidebar-icon-size: 1.25rem;
+$sidebar-icon-padding: $header-sidebar-padding;
+$sidebar-icon-sm-padding: $header-sidebar-sm-padding;
+
+$sidebar-toggle-border-radius: 8px;
+
+// Card
+$stat-card-font-weight: 300;
+$stat-card-font-size: 1rem;
+
+$stat-card-count-font-size: 2rem;
+$stat-card-count-padding: 0.75rem;
+
+// Table
+$table-img-size: 55px;
+$table-cell-padding-x: 0.75rem;
+
+$table-border-space: 1rem;
+
+// Chart
+$chart-bg-color: $white;
+
+// Srollbar
+$scrollbar-border-radius: 8px;

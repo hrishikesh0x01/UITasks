@@ -1,0 +1,103 @@
+// Styles for Sidebar lies here
+.sidebar {
+    background-color: $sidebar-bg-color;
+    width: 100px;
+    // box-shadow: 1px 1px 5px 1px $sidebar-toggle-shadow-color;
+    transition: all ease-in-out 0.4s;
+
+    .nav-item {
+        margin: $sidebar-icon-padding * 0.5;
+    }
+    .nav-link {
+        font-size: $sidebar-icon-size;
+        color: $sidebar-icon-color;
+
+        .icon {
+            padding: $sidebar-icon-padding * 0.5;
+        }
+
+        &.active {
+            color: $sidebar-icon-active-color;
+        }
+    }
+
+    @include for-size(portrait-tablet) {
+        transform: translateX(-76px);
+        width: 0;
+
+        .nav-item {
+            margin: $sidebar-icon-sm-padding * 0.5;
+        }
+        .nav-link {
+            .icon {
+                padding: $sidebar-icon-sm-padding * 0.5;
+            }
+        }
+    }
+    @include for-size(landscape-phone) {
+        transform: translateX(-43px);
+        width: 0;
+
+        .nav-item {
+            margin: $sidebar-icon-sm-padding * 0.25;
+        }
+        .nav-link {
+            font-size: $sidebar-icon-size * 0.75;
+            color: $sidebar-icon-color;
+
+            .icon {
+                padding: $sidebar-icon-sm-padding * 0.25;
+            }
+        }
+    }
+}
+
+.sidebar-toggle {
+    background-color: $white;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    border: 2px solid $body-color;
+    border-radius: $border-circle;
+    .icon {
+        transition: all ease-in-out 0.4s;
+    }
+
+    @include for-size(portrait-tablet) {
+        font-size: 0.75rem;
+        width: 20px;
+        height: 20px;
+        left: 76px;
+        .sidebar-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    @include for-size(landscape-phone) {
+        left: 43px;
+        .sidebar-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+#sidebar-checkbox:checked ~ .sidebar {
+    transform: translateX(-100px);
+    width: 0;
+    .sidebar-toggle {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    @include for-size(portrait-tablet) {
+        width: 76px;
+        transform: translateX(0);
+    }
+}
