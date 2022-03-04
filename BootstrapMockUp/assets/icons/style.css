@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'app';
-  src:  url('fonts/app.eot?91abgv');
-  src:  url('fonts/app.eot?91abgv#iefix') format('embedded-opentype'),
-    url('fonts/app.ttf?91abgv') format('truetype'),
-    url('fonts/app.woff?91abgv') format('woff'),
-    url('fonts/app.svg?91abgv#app') format('svg');
+  src:  url('fonts/app.eot?nat0bf');
+  src:  url('fonts/app.eot?nat0bf#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?nat0bf') format('truetype'),
+    url('fonts/app.woff?nat0bf') format('woff'),
+    url('fonts/app.svg?nat0bf#app') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-show-chart:before {
-  content: "\e90e";
+.icon-money:before {
+  content: "\e902";
 }
-.icon-apps:before {
-  content: "\e90a";
+.icon-list:before {
+  content: "\e904";
+}
+.icon-tips:before {
+  content: "\e906";
 }
 .icon-messages:before {
   content: "\e900";
@@ -37,29 +40,26 @@
 .icon-cart:before {
   content: "\e901";
 }
-.icon-eye:before {
-  content: "\e902";
-}
 .icon-settings:before {
   content: "\e903";
 }
-.icon-warning:before {
-  content: "\e904";
-}
-.icon-shopping-bag:before {
-  content: "\e905";
-}
-.icon-user-group:before {
-  content: "\e906";
-}
-.icon-notepad:before {
-  content: "\e907";
-}
-.icon-sign-out:before {
+.icon-logout:before {
   content: "\e908";
 }
 .icon-bell:before {
   content: "\e909";
+}
+.icon-alerts:before {
+  content: "\e909";
+}
+.icon-filter:before {
+  content: "\e905";
+}
+.icon-dollar:before {
+  content: "\e907";
+}
+.icon-trash:before {
+  content: "\e90a";
 }
 .icon-search:before {
   content: "\e90c";
@@ -67,6 +67,18 @@
 .icon-arrow:before {
   content: "\e90b";
 }
-.icon-square:before {
-  content: "\ea1e";
+.icon-sort:before {
+  content: "\e90f";
+}
+.icon-health:before {
+  content: "\e90d";
+}
+.icon-barcode:before {
+  content: "\e90e";
+}
+.icon-tags:before {
+  content: "\e935";
+}
+.icon-hamburger:before {
+  content: "\e9bd";
 }

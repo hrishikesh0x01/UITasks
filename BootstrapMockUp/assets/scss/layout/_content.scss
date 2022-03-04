@@ -1,20 +1,13 @@
-.main {
-    &-content {
-        padding: 2.5rem;
+.main-content {
+    padding: 1.5rem 2rem;
 
-        @include for-size(portrait-tablet) {
-            padding: 1.5rem;
-        }
-
-        .statistics {
-            @include for-size(landscape-tablet) {
-                flex-wrap: wrap;
-            }
-        }
+    .button-container {
+        padding-bottom: 1.5rem;
     }
 
-    &-title {
-        font-size: 1.5rem;
-        font-weight: 700;
+    .sub-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding: 2rem 0;
     }
 }

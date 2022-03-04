@@ -1,64 +1,80 @@
 // Colors
 $white: #ffffff;
+$black: #000000;
 
 $theme-colors: (
-    "primary": #438ffe,
-    "success": #8bc38a,
-    "secondary": #fe764b,
-    "info": #83bcbd,
+    "primary": #389cff,
+    "success": #00b11c,
+    "secondary": #fb881d,
+    "danger": #f25e5e,
+    "info": #6b67fe,
 );
 
+// button
+$btn-color: $white;
+
 // text
-$text-muted-color: #abb1bf;
+$text-muted-color: #6a6b6f; //535257
+
+// icon
+$icon-color: #82838a;
 
 // Body colors
-$body-color: #160e4d;
-$body-bg: #f8f8f8;
-// $body-bg: #000000;
+$body-color: $black;
+$body-bg: #fafafa;
 
-$border-color: #e2e2e2;
-
-//Header colors
+// header colors
 $header-bg-color: $white;
-
-// brand icon
-$brand-icon-color: map-get($theme-colors, "primary");
-$brand-icon-shadow-color: #c7deff;
-
-// searchbar
-$search-bg-color: $body-bg;
-$search-icon-color: $text-muted-color;
-$search-placeholder-color: $text-muted-color;
-
-// Notification
-$notif-icon-color: $text-muted-color;
-
-// badge
-$badge-bg-color: map-get($theme-colors, "secondary");
+$header-icon-color: $icon-color;
 
 // sidebar colors
 $sidebar-bg-color: $white;
-$sidebar-icon-color: $text-muted-color;
-$sidebar-icon-active-color: map-get($theme-colors, "primary");
+$sidebar-icon-color: $icon-color;
+$sidebar-nav-item-hover-color: map-get($theme-colors, "success"); //#03af1e;
+$sidebar-nav-item-hover-bg-color: lighten($sidebar-nav-item-hover-color, 62.5%);
 
-$sidebar-toggle-bg-color: $white;
-$sidebar-toggle-shadow-color: #a5a5a5;
+// Card colors
+$card-bg: $white;
 
-// card colors
-$stat-card-color: $text-muted-color;
-$stat-card-bg-color: $white;
-$stat-card-hover-color: $white;
-
-// buttons
-$btn-color: $white;
+//// Used direct colors for icon-container because color density is different
+//   for different colors and so lighten doesn't work.
+$card-colors: (
+    "scans": $black,
+    "list": map-get($theme-colors, "primary"),
+    "cost": #19ae70,
+    "buy-now": map-get($theme-colors, "secondary"),
+    "buy-cheaper": map-get($theme-colors, "info"),
+    "buy-healthier": map-get($theme-colors, "danger"),
+);
+$card-hover-color: $white;
 
 // Table
-$table-bg-color: $white;
-$table-row-bg-color: $body-bg;
+$table-bg: $white;
+// $table-border-color: transparent;
+$table-head-font-color: $text-muted-color;
+$table-body-font-color: #363845;
 
-// Chart
-$views-bar-color: map-get($theme-colors, "info");
-$sells-bar-color: map-get($theme-colors, "secondary");
+$order-types: (
+    "discarded": (
+        map-get($theme-colors, "danger"),
+        #ffeeed,
+    ),
+    "want": (
+        map-get($theme-colors, "success"),
+        #f2fcf4,
+    ),
+    "waiting": (
+        map-get($theme-colors, "secondary"),
+        #fff4e8,
+    ),
+    "cancelled": (
+        #050716,
+        #f6f6f6,
+    ),
+);
+
+// border color
+$border-color: #e2e2e2;
 
 // Scrollbar
 $scrollbar-color: $text-muted-color;

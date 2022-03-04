@@ -1,111 +1,101 @@
 // Header area style
 .header {
-    height: $header-height;
-    padding: 0 $header-padding-x;
+    flex: 0 0 $header-height;
     background-color: $header-bg-color;
-    border-bottom: $border-common;
-
-    @include for-size(portrait-tablet) {
-        padding: 0 $header-sidebar-sm-padding;
-        height: $header-height * 0.875;
-    }
+    padding-right: 1.5rem;
+    border-bottom: 2px solid $border-color;
 
     @include for-size(landscape-phone) {
-        height: $header-height * 0.75;
-        padding: 0 $header-sidebar-sm-padding * 0.5;
-    }
-
-    .brand-icon {
-        color: $brand-icon-color;
-        font-size: $brand-icon-size;
-        padding-right: 1.5rem;
-        text-shadow: 2px -2px $white, 7px -7px $brand-icon-shadow-color, 4px -7px $brand-icon-shadow-color,
-            7px -4px $brand-icon-shadow-color;
-
-        @include for-size(landscape-phone) {
-            font-size: $brand-icon-size * 0.625;
-            text-shadow: 1px -1px $white, 3px -3px $brand-icon-shadow-color, 2px -3px $brand-icon-shadow-color,
-                3px -2px $brand-icon-shadow-color;
+        // TODO: Modal not implemented.
+        .header-nav {
+            display: none;
         }
     }
 
-    .notification {
-        .nav-item {
-            padding: 0.125rem;
-            padding-left: 2rem;
+    .brand-logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        flex: 0 0 $brand-logo-width;
 
-            @include for-size(portrait-tablet) {
-                padding-left: 1rem;
-            }
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $brand-logo-width * 0.75;
+            font-size: 1.125rem;
+        }
 
-            @include for-size(landscape-phone) {
-                padding-left: 0.75rem;
-            }
+        @include for-size(portrait-phone) {
+            flex: 0 0 $brand-logo-width * 0.5;
+            font-size: 0.875rem;
+        }
+    }
+
+    .sidebar-toggle-label {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+
+        @include for-size(portrait-tablet) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .title {
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        @include for-size(portrait-tablet) {
+            font-size: 1rem;
+        }
+
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .profile-img {
+        width: $profile-img-size;
+        height: $profile-img-size;
+        border-radius: $border-circle;
+        margin: 0 1.25rem 0 0.75rem;
+
+        @include for-size(portrait-tablet) {
+            width: $profile-img-size * 0.875;
+            height: $profile-img-size * 0.875;
+            margin: 0 1rem 0 0.5rem;
+        }
+    }
+
+    .nav-item {
+        padding-left: 1rem;
+        font-weight: 500;
+
+        @include for-size(portrait-tablet) {
+            padding-left: 0.75rem;
         }
 
         .icon {
-            color: $notif-icon-color;
-            font-size: $notif-icon-size;
+            color: $header-icon-color;
+            font-size: 1.25rem;
+
+            @include for-size(portrait-tablet) {
+                font-size: 1rem;
+            }
         }
 
-        .badge {
-            height: 5px;
-            width: 5px;
-            background-color: $badge-bg-color;
-            border-radius: $border-circle;
-            @include position($top: 0, $right: 0);
+        .username {
+            font-size: 1rem;
+
+            @include for-size(portrait-tablet) {
+                font-size: 0.875rem;
+            }
         }
 
-        .profile-img {
-            border-radius: $border-circle;
-            width: $profile-img-size;
-            height: $profile-img-size;
-            margin-right: 0.875rem;
-        }
-
-        .dropdown-icon {
-            font-size: 0.5rem;
+        .dropdown {
+            font-size: 0.625rem;
             transform: rotate(90deg);
-        }
-    }
-}
+            padding: 0 0.75rem;
 
-// searchbar style
-.search-container {
-    height: $search-bar-height;
-    margin-left: 3.5rem;
-    background-color: $search-bg-color;
-
-    @include for-size(portrait-tablet) {
-        margin-left: 2.5rem;
-    }
-
-    @include for-size(landscape-phone) {
-        height: $search-bar-height * 0.75;
-        margin-left: 1.5rem;
-    }
-
-    .search-icon {
-        color: $search-icon-color;
-        padding: 0 1rem;
-    }
-
-    #search-input {
-        height: 100%;
-        width: 300px;
-        border: none;
-        border-radius: $border-radius;
-        background-color: $search-bg-color;
-        transition: all ease-in-out 0.4s;
-
-        &::placeholder {
-            color: $search-placeholder-color;
-        }
-
-        @include for-size(portrait-tablet) {
-            width: 0;
-            &:focus {
-                width: 30vw;
+            @include for-size(portrait-tablet) {
+                font-size: 0.5rem;
+                padding: 0 0.625rem;
             }
         }
     }

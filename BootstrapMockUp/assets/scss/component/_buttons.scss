@@ -4,16 +4,22 @@
     border: none;
     border-radius: $border-radius;
     color: $btn-color;
-    padding: 0 1rem;
-    transition: all ease-in-out 0.4s;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: $transition-common;
 
-    @include for-size(portrait-tablet) {
-        padding: 0 0.5rem;
+    .icon {
+        padding-right: 0.5rem;
     }
+}
 
-    @each $type, $color in $theme-colors {
-        &-#{$type} {
-            background-color: $color;
+@each $name, $color in $theme-colors {
+    .btn-#{$name} {
+        background-color: $color;
+
+        &:hover {
+            background-color: darken($color, 5%);
         }
     }
 }

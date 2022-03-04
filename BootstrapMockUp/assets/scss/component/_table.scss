@@ -1,66 +1,97 @@
 // Table styles
 .table-container {
-    height: $table-height;
-    flex-grow: 1;
-    background-color: $table-bg-color;
-    @include for-size(portrait-tablet) {
-        width: 100%;
-        margin-bottom: 1.5rem;
-    }
+    min-height: 400px;
 }
 
 .table {
-    // background-color: $table-bg-color;
-    padding: 0 1rem;
-    border-spacing: 0;
+    // width: 100%;
+    border-spacing: 0 2px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    border-collapse: separate;
 
-    .table-image {
-        height: $table-img-size;
-        width: $table-img-size;
-        overflow: hidden;
+    .item-img {
+        height: 20px;
+        width: 20px;
     }
 
-    .table-head {
-        font-size: 1.125rem;
+    .store-logo {
+        width: 70px;
 
-        .table-cell {
+        @include for-size(portrait-phone) {
+            width: 50px;
+        }
+    }
+
+    thead {
+        font-size: 0.875rem;
+
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+
+        .sort-icon {
+            font-size: 0.625rem;
+            padding: 0 0.25rem;
+        }
+
+        th {
+            font-weight: 400;
             text-align: left;
-            padding: 1.5rem $table-cell-padding-x;
+            color: $table-head-font-color;
+            padding: 1.25rem 1rem;
             background-color: $white;
             @include position(sticky, 0);
             white-space: nowrap;
+
+            @include for-size(portrait-phone) {
+                padding: 0.75rem 0.5rem;
+            }
         }
     }
 
-    .table-body {
-        font-weight: 500;
+    tbody {
+        font-size: 0.875rem;
+        font-weight: 400;
 
-        .table-cell {
-            padding: 1rem $table-cell-padding-x;
-            border-bottom: $table-border-space solid $white;
+        @include for-size(portrait-phone) {
+            font-size: 0.75rem;
+        }
+
+        .item-name {
+            font-weight: 500;
+            padding-left: 0.5rem;
+        }
+
+        td {
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+            color: $table-body-font-color;
+            // padding: 0.5rem 1rem;
             white-space: nowrap;
             text-overflow: ellipsis;
-        }
-    }
 
-    @include for-size(landscape-tablet) {
-        .table-body,
-        .table-head {
-            .table-cell {
-                padding: 0.5rem;
+            @include for-size(portrait-phone) {
+                padding: 0.5rem 0.75rem;
             }
         }
 
-        .table-head {
-            font-size: 1rem;
-        }
+        .type-cell {
+            border-radius: 25px;
+            padding: 0.25rem 0.75rem;
 
-        .table-body {
-            font-size: 0.75rem;
+            @each $type, $colors in $order-types {
+                &.#{$type} {
+                    color: nth($colors, 1);
+                    background-color: nth($colors, 2);
+                }
+            }
         }
-    }
-
-    .table-body .table-row {
-        background-color: $table-row-bg-color;
     }
 }

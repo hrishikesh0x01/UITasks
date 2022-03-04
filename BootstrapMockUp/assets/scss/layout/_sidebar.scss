@@ -1,103 +1,101 @@
 // Styles for Sidebar lies here
-.sidebar {
-    background-color: $sidebar-bg-color;
-    width: 100px;
-    // box-shadow: 1px 1px 5px 1px $sidebar-toggle-shadow-color;
-    transition: all ease-in-out 0.4s;
+#sidebarToggle {
+    ~ .sidebar {
+        flex: 0 0 $sidebar-width;
+        background-color: $sidebar-bg-color;
 
-    .nav-item {
-        margin: $sidebar-icon-padding * 0.5;
-    }
-    .nav-link {
-        font-size: $sidebar-icon-size;
-        color: $sidebar-icon-color;
+        transition: $transition-common;
 
-        .icon {
-            padding: $sidebar-icon-padding * 0.5;
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $sidebar-width * 0.75;
         }
 
-        &.active {
-            color: $sidebar-icon-active-color;
-        }
-    }
+        @include for-size(landscape-phone) {
+            flex: 0 0 $sidebar-width-closed * 0.75;
 
-    @include for-size(portrait-tablet) {
-        transform: translateX(-76px);
-        width: 0;
-
-        .nav-item {
-            margin: $sidebar-icon-sm-padding * 0.5;
+            .nav-section-title,
+            .link-text {
+                transform: translateX(100%);
+            }
         }
+
+        .nav-section {
+            padding-bottom: 1.75rem;
+
+            &-title {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 1.5rem 1.75rem 0.75rem;
+                transition: $transition-common;
+
+                @include for-size(portrait-tablet) {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
         .nav-link {
-            .icon {
-                padding: $sidebar-icon-sm-padding * 0.5;
-            }
-        }
-    }
-    @include for-size(landscape-phone) {
-        transform: translateX(-43px);
-        width: 0;
+            padding: 1rem 1.625rem;
+            color: $text-muted-color;
+            border-left: 4px solid $sidebar-bg-color;
+            transition: $transition-common;
 
-        .nav-item {
-            margin: $sidebar-icon-sm-padding * 0.25;
-        }
-        .nav-link {
-            font-size: $sidebar-icon-size * 0.75;
-            color: $sidebar-icon-color;
+            @include for-size(portrait-tablet) {
+                padding: 0.75rem 1.25rem;
+            }
 
             .icon {
-                padding: $sidebar-icon-sm-padding * 0.25;
+                font-size: 1.125rem;
+                padding-right: 1.25rem;
+                color: $sidebar-icon-color;
+                transition: $transition-common;
+
+                @include for-size(portrait-tablet) {
+                    font-size: 0.875rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            &:hover,
+            &.active {
+                color: $sidebar-nav-item-hover-color;
+                border-color: $sidebar-nav-item-hover-color;
+                background-color: $sidebar-nav-item-hover-bg-color;
+
+                .icon {
+                    color: $sidebar-nav-item-hover-color;
+                }
             }
         }
-    }
-}
 
-.sidebar-toggle {
-    background-color: $white;
-    width: 32px;
-    height: 32px;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%);
-    border: 2px solid $body-color;
-    border-radius: $border-circle;
-    .icon {
-        transition: all ease-in-out 0.4s;
+        .link-text {
+            flex: 0 0 $sidebar-width;
+            font-size: 0.875rem;
+            transition: $transition-common;
+        }
     }
 
-    @include for-size(portrait-tablet) {
-        font-size: 0.75rem;
-        width: 20px;
-        height: 20px;
-        left: 76px;
-        .sidebar-toggle {
-            .icon {
-                transform: rotate(180deg);
+    &:checked ~ .sidebar {
+        flex: 0 0 $sidebar-width-closed;
+
+        @include for-size(portrait-tablet) {
+            flex: 0 0 $sidebar-width-closed * 0.75;
+        }
+
+        .nav-section-title,
+        .link-text {
+            transform: translateX(100%);
+        }
+
+        @include for-size(landscape-phone) {
+            flex: 0 0 $sidebar-width * 0.75;
+
+            .nav-section-title,
+            .link-text {
+                transform: translateX(0);
             }
         }
-    }
-
-    @include for-size(landscape-phone) {
-        left: 43px;
-        .sidebar-toggle {
-            .icon {
-                transform: rotate(180deg);
-            }
-        }
-    }
-}
-
-#sidebar-checkbox:checked ~ .sidebar {
-    transform: translateX(-100px);
-    width: 0;
-    .sidebar-toggle {
-        .icon {
-            transform: rotate(180deg);
-        }
-    }
-
-    @include for-size(portrait-tablet) {
-        width: 76px;
-        transform: translateX(0);
     }
 }
