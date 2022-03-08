@@ -1,0 +1,24 @@
+// All the SCSS mixins goes here
+
+// media query mixins
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
+
+// $breakpoints: (
+//     big-desktop-up: 1400px,
+//     desktop-up: 1200px,
+//     landscape-tablet: 992px,
+//     portrait-tablet: 768px,
+//     landscape-phone: 576px,
+//     portrait-phone: 320px,
+// );
+
+// @mixin for-size($device) {
+//     @each $dev, $size in $breakpoints {
+//         @if ($dev == $device) {
+//             @media screen and (max-width: $size) {
+//                 @content;
+//             }
+//         }
+//     }
+// }

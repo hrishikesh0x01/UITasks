@@ -1,0 +1,15 @@
+// Base styles
+@import "base/index";
+
+// Bootstrap
+@import "vendor/bootstrap-base";
+@import "vendor/bootstrap-component";
+
+// Component specific styles
+@import "component/index";
+
+// Layout styles
+@import "layout/index";
+
+// Utility like font family and reset.
+@import "utilities/index";
