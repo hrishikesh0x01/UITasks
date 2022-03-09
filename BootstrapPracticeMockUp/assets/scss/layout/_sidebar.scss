@@ -1,15 +1,10 @@
 .sidebar {
-    .profile-img-wrapper {
-        border: 1px solid grey;
-        border-radius: $border-radius;
-        padding: 0.5rem;
-        .profile-img {
+    flex: 0 0 300px;
+
+    .profile {
+        .profile__image {
             width: 60px;
             height: 60px;
-
-            margin-bottom: 0;
-    
-            border-radius: $border-radius;
         }
     }
 }

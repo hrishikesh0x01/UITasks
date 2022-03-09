@@ -11,96 +11,240 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
-<body>
+<body class="overflow-hidden">
     <!-- Start: Wrapper -->
-    <div class="wrapper h-100 d-flex">
+    <div class="h-100 d-flex">
         <!-- Start: Sidebar -->
+        <input type="checkbox" name="sidebarToggle" id="sidebarToggle" class="d-none">
         <div class="sidebar">
-            <div class="header">
-                <span class="icon icon-apps">icon</span>
+            <div class="sidebar__header">
+                <label for="sidebarToggle" class="toggle__label m-5 p-3 d-flex flex-column justify-content-between">
+                    <span class="icon icon-apps"></span>
+                </label>
             </div>
             <!-- Start: navbar -->
             <nav class="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">
-                            <span class="icon">icon</span>
+                            <span class="icon"></span>
                             <span>Nav-item</span>
                         </a>
                     </li>
                 </ul>
             </nav>
             <!-- End: navbar -->
-            <div class="profile d-flex flex-column align-items-center">
-                <div class="profile-img-wrapper">
-                    <figure class="profile-img overflow-hidden d-flex align-items-center justify-content-center">
-                        <img src="assets/images/profile.jpg" alt="profile image">
-                    </figure>
-                </div>
+            <!-- Start: profile -->
+            <div class="profile d-flex flex-column align-items-center position-relative">
+                <figure class="profile__image overflow-hidden d-flex align-items-center justify-content-center">
+                    <img src="assets/images/profile.jpg" alt="profile image">
+                </figure>
                 <span class="name">David Milan</span>
             </div>
+            <!-- End: profile -->
         </div>
         <!-- End: Sidebar -->
         <!-- Start: Main -->
-        <main class="main flex-grow-1">
-            <div class="main-wrapper d-flex">
-                <!-- Start: Main Content -->
-                <div class="main-content d-flex flex-column flex-grow-1">
-                    <div class="input-div">
-                        <input type="text" name="search" id="search" class="input-field">
-                    </div>
-                    <div class="heading">
-                        <h1 class="title">Hello David</h1>
+        <main class="main flex-grow-1 m-5 overflow-auto d-flex">
+            <!-- Start: Main Content -->
+            <div class="main__content flex-grow-1 me-5 d-flex flex-column">
+                <div class="input-div mb-4">
+                    <input type="text" name="search" id="search" class="input-field">
+                </div>
+                <!-- Start: User Greetings -->
+                <div class="my-4 d-flex justify-content-between">
+                    <div>
+                        <h1 class="title">Hello, World!</h1>
                         <span class="greeting">Welcome Back !</span>
                     </div>
-                    <div class="statistic-cards bg-info d-flex flex-row card">
-                        <div class="inner-card">
-                            ok
+                    <div>
+                        <button type="button">Filters</button>
+                    </div>
+                </div>
+                <!-- End: User Greetings -->
+                <!-- Start: Statistic cards -->
+                <div class="bg-info p-4 mb-4 d-flex flex-wrap card-wrapper">
+                    <div class="col d-flex flex-column">
+                        <span class="icon-container bg-danger">
+                            <span class="icon icon-eye"></span>
+                        </span>
+                        <h4 class="statistic-cards__title">Views</h4>
+                        <span class="statistic-cards__count">500</span>
+                        <span class="statistic-cards__text">Per Day</span>
+                    </div>
+                    <div class="col d-flex flex-column">
+                        <span class="icon-container bg-danger">
+                            <span class="icon icon-eye"></span>
+                        </span>
+                        <h4 class="statistic-cards__title">Views</h4>
+                        <span class="statistic-cards__count">500</span>
+                        <span class="statistic-cards__text">Per Day</span>
+                    </div>
+                    <div class="col d-flex flex-column">
+                        <span class="icon-container bg-danger">
+                            <span class="icon icon-eye"></span>
+                        </span>
+                        <h4 class="statistic-cards__title">Views</h4>
+                        <span class="statistic-cards__count">500</span>
+                        <span class="statistic-cards__text">Per Day</span>
+                    </div>
+                </div>
+                <!-- End: Statistic cards -->
+                <div class="row">
+                    <div class="col-6 d-flex flex-column pb-4">
+                        <div class="bg-dark card">
+                            <span class="icon icon-arrow text-end"></span>
+                            <div class="inner-card d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h3>Sales</h3>
+                                    <span class="text-muted">Total Sales Today</span>
+                                    <span class="amount">$500</span>
+                                </div>
+                                <div class="pie-chart d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div
+                                        class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
+                                        72%
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="inner-card">
-                            ok
+                    </div>
+                    <div class="col-6 d-flex flex-column pb-4">
+                        <div class="bg-dark card">
+                            <span class="icon icon-arrow text-end"></span>
+                            <div class="inner-card d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h3>Sales</h3>
+                                    <span class="text-muted">Total Sales Today</span>
+                                    <span class="amount">$500</span>
+                                </div>
+                                <div class="pie-chart d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div
+                                        class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
+                                        72%
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="inner-card">
-                            ok
+                    </div>
+                    <div class="col-6 d-flex flex-column pb-4">
+                        <div class="bg-dark card">
+                            <span class="icon icon-arrow text-end"></span>
+                            <div class="inner-card d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h3>Sales</h3>
+                                    <span class="text-muted">Total Sales Today</span>
+                                    <span class="amount">$500</span>
+                                </div>
+                                <div class="pie-chart d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div
+                                        class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
+                                        72%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex flex-column pb-4">
+                        <div class="bg-dark card">
+                            <span class="icon icon-arrow text-end"></span>
+                            <div class="inner-card d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h3>Sales</h3>
+                                    <span class="text-muted">Total Sales Today</span>
+                                    <span class="amount">$500</span>
+                                </div>
+                                <div class="pie-chart d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div
+                                        class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
+                                        72%
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- End: Main Content -->
-                <div class="d-flex flex-column">
-                    <aside class="sales card text-light bg-dark p-4">
-                        Hrishi
-                    </aside>
-                </div>
+            </div>
+            <!-- End: Main Content -->
+            <div class="d-flex flex-column">
+                <aside class="text-light bg-dark p-4 revenue-wrapper">
+                    <div>
+                        <h2>Sales Revenue</h2>
+                        <div>
+                            <div class="d-flex">
+                                <span class="icon-container bg-red">
+                                    <span class="icon icon-user"></span>
+                                </span>
+                                <div>
+                                    <span>230k</span>
+                                    <h3>Sales</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <span class="icon-container bg-red">
+                                    <span class="icon icon-user"></span>
+                                </span>
+                                <div>
+                                    <span>230k</span>
+                                    <h3>Sales</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <span class="icon-container bg-red">
+                                    <span class="icon icon-user"></span>
+                                </span>
+                                <div>
+                                    <span>230k</span>
+                                    <h3>Sales</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <span class="icon-container bg-red">
+                                    <span class="icon icon-user"></span>
+                                </span>
+                                <div>
+                                    <span>230k</span>
+                                    <h3>Sales</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Statistics</h2>
+                        <div class="chart">
+                        </div>
+                    </div>
+                </aside>
             </div>
         </main>
         <!-- End: Main -->
