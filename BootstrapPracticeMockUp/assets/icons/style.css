@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'app';
-  src:  url('fonts/app.eot?ian9dg');
-  src:  url('fonts/app.eot?ian9dg#iefix') format('embedded-opentype'),
-    url('fonts/app.ttf?ian9dg') format('truetype'),
-    url('fonts/app.woff?ian9dg') format('woff'),
-    url('fonts/app.svg?ian9dg#app') format('svg');
+  src:  url('fonts/app.eot?1cncc5');
+  src:  url('fonts/app.eot?1cncc5#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?1cncc5') format('truetype'),
+    url('fonts/app.woff?1cncc5') format('woff'),
+    url('fonts/app.svg?1cncc5#app') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-filter:before {
+  content: "\e911";
+}
+.icon-brand-logo:before {
+  content: "\e912";
+}
+.icon-sales:before {
+  content: "\e90e";
+}
 .icon-chart:before {
   content: "\e90d";
 }
 .icon-customer:before {
   content: "\e909";
-}
-.icon-filters:before {
-  content: "\e908";
 }
 .icon-shop-window:before {
   content: "\e906";
@@ -60,9 +66,6 @@
 }
 .icon-search:before {
   content: "\e90c";
-}
-.icon-apps:before {
-  content: "\e90e";
 }
 .icon-dashboard:before {
   content: "\e90b";

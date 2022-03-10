@@ -1,0 +1,100 @@
+.icon--container {
+    height: $icon-container-size;
+    width: $icon-container-size;
+
+    border-radius: $border-circle;
+
+    .icon {
+        font-size: $card-icon-font-size;
+    }
+}
+
+.rates-row {
+    background-color: lighten($rate-card-icon-bg-color, 10%);
+    padding: 2rem 2.25rem;
+
+    .icon--container {
+        margin-bottom: 1.75rem;
+        background-color: $rate-card-icon-bg-color;
+    }
+
+    &__title,
+    &__text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    &__count {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+.stat-card {
+    padding: 1.5rem 2.25rem;
+
+    .icon {
+        font-size: 1.5rem;
+
+        &.up {
+            transform: rotate(45deg);
+        }
+        &.down {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+    }
+
+    &__amount {
+        font-size: 1.875rem;
+        font-weight: 600;
+    }
+}
+
+@each $name, $val in $card-colors {
+    $col: nth($val, 1);
+    $percent: nth($val, 2);
+    .stat-card.#{$name} {
+        background-color: rgba($col, 0.18);
+
+        .icon {
+            color: $col;
+        }
+
+        .pie-chart {
+            background: conic-gradient($primary $percent, transparent $percent 100%);
+
+            .inner-div {
+                background-color: rgba($col, 0.18);
+            }
+        }
+    }
+}
+
+.revenue-wrapper {
+    border-radius: $border-radius;
+
+    &__title {
+        font-size: 1.25rem;
+    }
+
+    .icon--container {
+        background-color: $card-icon-container-bg;
+        color: $primary;
+    }
+}
+
+.revenue__card {
+    .card__title {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+}

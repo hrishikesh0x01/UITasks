@@ -1,19 +1,21 @@
 .pie-chart {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 
     border-radius: 100%;
 
-    background: conic-gradient(red 72%, transparent 72% 100%);
-
     overflow: hidden;
 
-    .inner-div {
-        width: 90%;
-        height: 90%;
-
+    .inner-wrapper {
+        width: 87%;
+        height: 87%;
         border-radius: 100%;
-        background-color: #fff;
+        background-color: $body-bg;
         overflow: hidden;
+
+        .inner-div {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
     }
 }

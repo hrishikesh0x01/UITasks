@@ -1,11 +1,50 @@
 // All the SCSS Variables goes here
 
+// Bootstrap
+// Fonts
+$font-family-base: "Poppins", "sans-serif";
+$headings-font-weight: 600;
+
+// Border
+$border-radius: 2.5rem;
+
+// cards
+$card-border-radius: $border-radius;
+$card-border-width: 0;
+$card-spacer-x: 0.5rem;
+$card-spacer-y: 0.5rem;
+
+//input
+$input-font-size: 0.875rem;
+$input-border-radius: 1rem;
+$input-padding-y: 0.875rem;
+$input-padding-x: 1rem;
+
+//Custom
 // Border
 $border-circle: 100%;
 $border-common: 1px solid $border-color;
-$border-radius:1rem;
+
 // Srollbar
 $scrollbar-border-radius: 8px;
 
 // Extras
 $transition-common: all ease-in-out 0.4s;
+
+// Icons
+$icon-size: 1.5rem;
+
+$icon-container-size: 50px;
+
+// Sidebar
+$sidebar-width: 280px;
+$sidebar-nav-icon-size: $icon-size;
+
+// Input
+$search-icon-font-size: 1.5rem;
+$search-input-width: 500px;
+$filters-icon-font-size: 1.5rem;
+$filters-input-width: 120px;
+
+// Cards
+$card-icon-font-size: $icon-size;

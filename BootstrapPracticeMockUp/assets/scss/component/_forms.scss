@@ -1,0 +1,15 @@
+.search {
+    width: $search-input-width;
+
+    .icon {
+        font-size: $search-icon-font-size;
+    }
+}
+
+.filters {
+    flex: 0 0 $filters-input-width;
+
+    .icon {
+        font-size: $filters-icon-font-size;
+    }
+}

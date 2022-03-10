@@ -2,10 +2,33 @@
 $white: #ffffff;
 $black: #000000;
 
-$text-muted-color: #6a6b6f; //535257
+$text-muted: #a7a7a7; //535257
+
+$primary: #000000;
+$secondary: #e4e0d5;
 
 // border color
 $border-color: #e2e2e2;
 
 // Scrollbar
-$scrollbar-color: $text-muted-color;
+$scrollbar-color: grey;
+
+// body
+$body-bg: $white;
+$body-color: $primary;
+
+// Bootstrap
+$nav-link-color: $body-color;
+$nav-link-hover-color: $nav-link-color;
+
+
+// Cards
+$card-icon-container-bg: #e2e2e2;
+$rate-card-icon-bg-color: $secondary;
+
+$card-colors: (
+    sales: (#d68148, 55%),
+    profit: (#7bcd81, 30%),
+    orders: (#74c1da, 80%),
+    visits: ($primary, 70%),
+);
