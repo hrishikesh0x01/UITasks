@@ -14,13 +14,18 @@
 <body>
     <!-- Start: Wrapper -->
     <div class="h-100 d-flex">
+        <input type="checkbox" name="sidebarToggle" id="sidebarToggle" checked class="d-none">
+        <div id="sidebarToggleCheckbox" class="position-absolute top-50 fs-1">
+            <label for="sidebarToggle">
+                >
+            </label>
+        </div>
         <!-- Start: Sidebar -->
-        <input type="checkbox" name="sidebarToggle" id="sidebarToggle" class="d-none">
-        <div class="sidebar border-end d-flex flex-column">
-            <div class="sidebar__header">
-                <label for="sidebarToggle" class="toggle__label ps-5 py-5 d-flex flex-column justify-content-between">
+        <div class="sidebar position-absolute top-0 bottom-0 start-0 border-end d-flex flex-column">
+            <div>
+                <label for="sidebarToggle" class="ms-4 ps-4 py-5 d-flex flex-column justify-content-between">
                     <span class="icon icon-brand-logo"></span>
-                </label>
+                </span>
             </div>
             <!-- Start: navbar -->
             <nav class="flex-grow-1">
@@ -75,30 +80,30 @@
         </div>
         <!-- End: Sidebar -->
         <!-- Start: Main -->
-        <main class="main flex-grow-1 py-4 px-5 overflow-auto d-flex">
+        <main class="main flex-grow-1 py-3 py-lg-4 px-3 px-md-4 px-lg-5 overflow-auto d-flex flex-column flex-lg-row">
             <!-- Start: Main Content -->
-            <div class="main__content flex-grow-1 me-5 d-flex flex-column">
+            <div class="main__content flex-grow-1 me-0 me-lg-5 d-flex flex-column">
                 <div class="search my-4 position-relative">
-                    <span class="icon icon-search position-absolute top-50 ps-3 translate-middle-y"></span>
+                    <span class="icon icon-search fs-4 position-absolute top-50 ps-3 translate-middle-y"></span>
                     <input type="text" name="search" id="search" placeholder="Search for stats"
-                        class="form-control ps-5">
+                        class="form-control p-2 ps-5 py-sm-3 pe-sm-3 ps-sm-5">
                 </div>
                 <!-- Start: User Greetings -->
                 <div class="my-4 d-flex justify-content-between align-items-end">
                     <div class="flex-grow-1">
-                        <h1 class="title">Hello, World!</h1>
+                        <h1 class="title text-nowrap">Hello, World!</h1>
                         <span class="greeting text-muted">Welcome Back !</span>
                     </div>
-                    <div class="filters position-relative">
-                        <span class="icon icon-filter position-absolute top-50 end-0 pe-3 translate-middle-y"></span>
-                        <input type="text" name="filters" id="filters" placeholder="Filters" class="form-control">
+                    <div class="filters position-relative flex-shrink-1 w-75">
+                        <span class="icon icon-filter bg-white fs-4 position-absolute top-50 end-0 pe-0 pe-sm-2 me-2 translate-middle-y"></span>
+                        <input type="text" name="filters" id="filters" placeholder="Filters" class="form-control p-2 p-sm-3">
                     </div>
                 </div>
                 <!-- End: User Greetings -->
                 <!-- Start: Rates cards -->
-                <div class="rates-row mb-4 d-flex flex-wrap card flex-row">
-                    <div class="col d-flex flex-column">
-                        <span class="icon--container d-flex align-items-center justify-content-center">
+                <div class="rates-row mb-4 d-flex flex-wrap card flex-row p-3 p-md-4">
+                    <div class="col-12 col-sm-4 d-flex flex-row flex-sm-column align-items-center align-items-sm-start">
+                        <span class="icon--container mb-0 me-4 me-sm-0 mb-sm-4 d-flex align-items-center justify-content-center">
                             <span class="icon icon-eye"></span>
                         </span>
                         <div class="card-body">
@@ -107,8 +112,8 @@
                             <span class="rates-row__text text-muted">Per Day</span>
                         </div>
                     </div>
-                    <div class="col d-flex flex-column">
-                        <span class="icon--container d-flex align-items-center justify-content-center">
+                    <div class="col-12 col-sm-4 d-flex flex-row flex-sm-column align-items-center align-items-sm-start">
+                        <span class="icon--container mb-0 me-4 me-sm-0 mb-sm-4 d-flex align-items-center justify-content-center">
                             <span class="icon icon-eye"></span>
                         </span>
                         <div class="card-body">
@@ -117,8 +122,8 @@
                             <span class="rates-row__text text-muted">Per Day</span>
                         </div>
                     </div>
-                    <div class="col d-flex flex-column">
-                        <span class="icon--container d-flex align-items-center justify-content-center">
+                    <div class="col-12 col-sm-4 d-flex flex-row flex-sm-column align-items-center align-items-sm-start">
+                        <span class="icon--container mb-0 me-4 me-sm-0 mb-sm-4 d-flex align-items-center justify-content-center">
                             <span class="icon icon-eye"></span>
                         </span>
                         <div class="card-body">
@@ -131,22 +136,23 @@
                 <!-- End: Rates cards -->
                 <!-- Start: Statistics cards -->
                 <div class="row">
-                    <div class="col-6 d-flex flex-column pb-4">
+                    <div class="col-12 col-sm-6 d-flex flex-column pb-4">
                         <div class="stat-card card sales">
                             <div class="d-flex justify-content-end">
                                 <span class="icon icon-arrow up"></span>
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div
+                                class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <h3 class="stat-card__title">Sales</h3>
                                     <span class="stat-card__text text-muted">Total Sales Today</span>
                                     <span class="stat-card__amount pt-2">$500</span>
                                 </div>
                                 <div
-                                    class="pie-chart me-3 d-flex justify-content-center align-items-center overflow-hidden">
-                                    <div class="inner-wrapper">
+                                    class="pie-chart rounded-circle d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div class="inner-wrapper rounded-circle">
                                         <div
-                                            class="inner-div w-100 h-100 d-flex justify-content-center align-items-center overflow-hidden">
+                                            class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
                                             55%
                                         </div>
                                     </div>
@@ -154,22 +160,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 d-flex flex-column pb-4">
+                    <div class="col-12 col-sm-6 d-flex flex-column pb-4">
                         <div class="stat-card card profit">
                             <div class="d-flex justify-content-end">
                                 <span class="icon icon-arrow up"></span>
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div
+                                class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <h3 class="stat-card__title">Sales</h3>
                                     <span class="stat-card__text text-muted">Total Sales Today</span>
                                     <span class="stat-card__amount pt-2">$500</span>
                                 </div>
                                 <div
-                                    class="pie-chart me-3 d-flex justify-content-center align-items-center overflow-hidden">
-                                    <div class="inner-wrapper">
+                                    class="pie-chart rounded-circle d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div class="inner-wrapper rounded-circle">
                                         <div
-                                            class="inner-div w-100 h-100 d-flex justify-content-center align-items-center overflow-hidden">
+                                            class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
                                             30%
                                         </div>
                                     </div>
@@ -177,22 +184,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 d-flex flex-column pb-4">
+                    <div class="col-12 col-sm-6 d-flex flex-column pb-4">
                         <div class="stat-card card orders">
                             <div class="d-flex justify-content-end">
                                 <span class="icon icon-arrow up"></span>
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div
+                                class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <h3 class="stat-card__title">Orders</h3>
                                     <span class="stat-card__text text-muted">Total Orders Today</span>
                                     <span class="stat-card__amount pt-2">$500</span>
                                 </div>
                                 <div
-                                    class="pie-chart me-3 d-flex justify-content-center align-items-center overflow-hidden">
-                                    <div class="inner-wrapper">
+                                    class="pie-chart rounded-circle d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div class="inner-wrapper rounded-circle">
                                         <div
-                                            class="inner-div w-100 h-100 d-flex justify-content-center align-items-center overflow-hidden">
+                                            class="inner-div d-flex justify-content-center align-items-center overflow-hidden">
                                             80%
                                         </div>
                                     </div>
@@ -200,22 +208,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 d-flex flex-column pb-4">
+                    <div class="col-12 col-sm-6 d-flex flex-column pb-4">
                         <div class="stat-card card visits">
                             <div class="d-flex justify-content-end">
                                 <span class="icon icon-arrow up"></span>
                             </div>
-                            <div class="d-flex justify-content-between">
+                            <div
+                                class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex flex-column">
                                     <h3 class="stat-card__title">Sales</h3>
                                     <span class="stat-card__text text-muted">Total Sales Today</span>
                                     <span class="stat-card__amount pt-2">$500</span>
                                 </div>
                                 <div
-                                    class="pie-chart me-3 d-flex justify-content-center align-items-center overflow-hidden">
-                                    <div class="inner-wrapper">
+                                    class="pie-chart rounded-circle d-flex justify-content-center align-items-center overflow-hidden">
+                                    <div class="inner-wrapper rounded-circle d-flex">
                                         <div
-                                            class="inner-div w-100 h-100 d-flex justify-content-center align-items-center overflow-hidden">
+                                            class="inner-div rounded-circle d-flex justify-content-center align-items-center overflow-hidden">
                                             70%
                                         </div>
                                     </div>
@@ -228,49 +237,53 @@
             </div>
             <!-- End: Main Content -->
             <!-- Start: Side Content -->
-            <aside class="revenue-wrapper text-light bg-primary p-4 mb-4 d-flex flex-column">
-                <div>
-                    <h2 class="revenue-wrapper__title">Sales Revenue</h2>
-                    <div class="revenue">
-                        <div class="revenue__card d-flex">
-                            <span class="icon--container d-flex align-items-center justify-content-center">
-                                <span class="icon icon-user"></span>
+            <aside class="revenue-wrapper overflow-hidden text-light bg-primary px-4 px-md-4 px-lg-5 py-3 py-md-2 py-lg-3 mb-4 d-flex flex-column">
+                <!-- Start: Sales revenue -->
+                <div class="pt-4">
+                    <h2 class="revenue-wrapper__title pb-3">Sales Revenue</h2>
+                    <!-- Start: Revenue cards -->
+                    <div class="revenue d-flex row g-0 flex-lg-column">
+                        <div class="revenue__card py-3 col-12 col-sm-6 col-md-3 col-lg-12 card flex-row align-items-center">
+                            <span class="icon--container d-flex align-items-center justify-content-center me-3">
+                                <span class="icon icon-sales"></span>
                             </span>
-                            <div>
+                            <div class="ms-4 ms-md-0 ms-lg-3 d-flex flex-column">
                                 <span class="card__text">230k</span>
-                                <h3 class="card__title text-muted">Sales</h3>
+                                <h3 class="card__title mt-2 mb-0 text-muted">Sales</h3>
                             </div>
                         </div>
-                        <div class="d-flex">
-                            <span class="icon--container d-flex align-items-center justify-content-center">
+                        <div class="revenue__card py-3 col-12 col-sm-6 col-md-3 col-lg-12 card flex-row align-items-center">
+                            <span class="icon--container d-flex align-items-center justify-content-center me-3">
                                 <span class="icon icon-customer"></span>
                             </span>
-                            <div>
-                                <span>230k</span>
-                                <h3>Sales</h3>
+                            <div class="ms-4 ms-md-0 ms-lg-3 d-flex flex-column">
+                                <span class="card__text">8.549k</span>
+                                <h3 class="card__title mt-2 mb-0 text-muted">Customers</h3>
                             </div>
                         </div>
-                        <div class="d-flex">
-                            <span class="icon--container d-flex align-items-center justify-content-center">
-                                <span class="icon icon-user"></span>
+                        <div class="revenue__card py-3 col-12 col-sm-6 col-md-3 col-lg-12 card flex-row align-items-center">
+                            <span class="icon--container d-flex align-items-center justify-content-center me-3">
+                                <span class="icon icon-dashboard"></span>
                             </span>
-                            <div>
-                                <span>230k</span>
-                                <h3>Sales</h3>
+                            <div class="ms-4 ms-md-0 ms-lg-3 d-flex flex-column">
+                                <span class="card__text">1.423k</span>
+                                <h3 class="card__title mt-2 mb-0 text-muted">Products</h3>
                             </div>
                         </div>
-                        <div class="d-flex">
-                            <span class="icon--container d-flex align-items-center justify-content-center">
-                                <span class="icon icon-user"></span>
+                        <div class="revenue__card py-3 col-12 col-sm-6 col-md-3 col-lg-12 card flex-row align-items-center">
+                            <span class="icon--container d-flex align-items-center justify-content-center me-3">
+                                <span class="icon icon-chart"></span>
                             </span>
-                            <div>
-                                <span>230k</span>
-                                <h3>Sales</h3>
+                            <div class="ms-4 ms-md-0 ms-lg-3 d-flex flex-column">
+                                <span class="card__text">$9745</span>
+                                <h3 class="card__title mt-2 mb-0 text-muted">Revenue</h3>
                             </div>
                         </div>
                     </div>
+                    <!-- End: Revenue cards -->
                 </div>
-                <div>
+                <!-- End: Sales revenue -->
+                <div class="pt-3">
                     <h2 class="revenue-wrapper__title">Statistics</h2>
                     <div class="chart">
                     </div>

@@ -1,19 +1,20 @@
 .pie-chart {
-    width: 90px;
-    height: 90px;
-
-    border-radius: 100%;
+    max-width: $pie-chart-size;
+    max-height: $pie-chart-size;
+    min-width: $pie-chart-size;
+    min-height: $pie-chart-size;
 
     overflow: hidden;
 
     .inner-wrapper {
-        width: 87%;
-        height: 87%;
-        border-radius: 100%;
+        width: calc(#{$pie-chart-size} - #{$pie-chart-border-width});
+        height: calc(#{$pie-chart-size} - #{$pie-chart-border-width});
         background-color: $body-bg;
         overflow: hidden;
 
         .inner-div {
+            width: calc(#{$pie-chart-size} - #{$pie-chart-border-width});
+            height: calc(#{$pie-chart-size} - #{$pie-chart-border-width});
             font-size: 1.5rem;
             font-weight: 700;
         }

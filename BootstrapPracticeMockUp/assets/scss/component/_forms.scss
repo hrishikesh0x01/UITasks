@@ -1,15 +1,9 @@
 .search {
-    width: $search-input-width;
-
-    .icon {
-        font-size: $search-icon-font-size;
-    }
+    max-width: $search-input-width;
+    min-width: $search-input-width * .5;
+    width: 60%;
 }
 
 .filters {
     flex: 0 0 $filters-input-width;
-
-    .icon {
-        font-size: $filters-icon-font-size;
-    }
 }

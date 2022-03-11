@@ -11,8 +11,6 @@ $border-radius: 2.5rem;
 // cards
 $card-border-radius: $border-radius;
 $card-border-width: 0;
-$card-spacer-x: 0.5rem;
-$card-spacer-y: 0.5rem;
 
 //input
 $input-font-size: 0.875rem;
@@ -40,6 +38,9 @@ $icon-container-size: 50px;
 $sidebar-width: 280px;
 $sidebar-nav-icon-size: $icon-size;
 
+// revenue aside
+$revenue-aside-width: 300px;
+
 // Input
 $search-icon-font-size: 1.5rem;
 $search-input-width: 500px;
@@ -48,3 +49,11 @@ $filters-input-width: 120px;
 
 // Cards
 $card-icon-font-size: $icon-size;
+
+// Pie-chart
+$pie-chart-size: 80px;
+$pie-chart-border-width: 10px;
+
+
+// Extra
+$transition-common: all ease-in-out 0.4s;
